@@ -1,6 +1,10 @@
+@font-face {
+  font-family: Orbitron;
+  src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+}
 
 body{
-  background: url('../assets/images/Background.png') no-repeat center center fixed;
+  background: url('../assets/images/project.jpg') no-repeat center center fixed;
   /* background-attachment: aut; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -11,14 +15,14 @@ body{
 .home-container{
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .text{
-  /* align-items: center; */
-  /* align-content: center ; */
-  /* text-align: center; */
-  font-size: 2rem;
-  color: red;
+  font-family: Orbitron;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 4px 4px 4px #ff8533;
 }
