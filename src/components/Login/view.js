@@ -35,7 +35,7 @@ export default function View() {
             ),
           }}
         />
-        <Button>Login</Button>
+        <button className='login-button'>Login</button>
       </form>
     </div>
   )
