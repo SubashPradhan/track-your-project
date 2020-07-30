@@ -1,0 +1,31 @@
+.login-container{
+  margin-top: 10%;
+  color: aliceblue;
+}
+
+.login-form{
+  min-width: 350px;
+  display: inline-flex;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 10px;
+  background: linear-gradient(90deg, rgba(254, 173, 166, 0.8), rgba(128, 208, 199, 0.2));
+}
+
+.MuiOutlinedInput-root{
+  margin: 12px;
+}
+
+.text-field{
+  min-width: 250px;
+  text-indent: 2mm;
+}
+
+.login-form input{
+  min-height: 20px;
+  min-width: 200px;
+  border-radius: 50px;
+  outline: none;
+}
+
+

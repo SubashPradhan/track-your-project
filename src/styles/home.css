@@ -5,7 +5,6 @@
 
 body{
   background: url('../assets/images/project.jpg') no-repeat center center fixed;
-  /* background-attachment: aut; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
