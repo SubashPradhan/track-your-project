@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import View from './view'
 
-class Home extends Component {
+class Login extends Component {
   render() {
     return (
       <div>
-        <View />  
+        <View />
       </div>
     )
   }
 }
 
-export default Home
+export default Login
