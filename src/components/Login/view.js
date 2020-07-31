@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/login.css'
-import {TextField, InputAdornment, Button} from '@material-ui/core';
-import {AccountCircle, AlternateEmail, VpnKeyRounded, VisibilityOffRounded} from '@material-ui/icons';
+import { TextField, InputAdornment } from '@material-ui/core';
+import { AccountCircle, VisibilityOffRounded } from '@material-ui/icons';
 
 export default function View() {
   return (
