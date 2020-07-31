@@ -11,7 +11,6 @@
 
 .login-form{
   flex-direction: column;
-  align-items: center;
   display: inline-flex;
   min-width: 40%;
   border-radius: 10px;
@@ -21,16 +20,15 @@
 
 .MuiOutlinedInput-root{
   margin: 12px;
-  width: 500px;
+  min-width: 40%;
 }
 
 .text-field{
-  /* min-width: 250px; */
   text-indent: 2mm;
 }
 
 .login-button{
-  text-align: center;
+  align-self: center;
   width: 150px;
   min-height: 35px;
   cursor: pointer;
@@ -65,9 +63,3 @@
 .login-button:hover::before{
   left: 100%;
 }
-
-
-/* .login-button:hover{
-  
-} */
-
