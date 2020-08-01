@@ -18,12 +18,109 @@
   background: linear-gradient(90deg, rgba(254, 173, 166, 0.8), rgba(128, 208, 199, 0.2));
 }
 
-.MuiOutlinedInput-root{
+.MuiFilledInput-root{
+  position: relative;
   margin: 12px;
-  min-width: 40%;
+  /* min-width: 40%; */
 }
 
+.MuiFilledInput-underline:after{
+  /* border-bottom: none !important; */
+}
+
+.MuiFilledInput-root::before{
+  border: 2px solid;
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  height: 0;
+  width: 0;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.MuiFilledInput-root:hover::before{
+  animation: animate 1s linear forwards;
+}
+
+
+@keyframes animate{
+  0%{
+    width: 0;
+    height: 0;
+    border-top-color: #262626 ;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  50%{
+    width: 100%;
+    height: 0;
+    border-top-color: #262626 ;
+    border-right-color: #262626;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  100%{
+    width: 100%;
+    height: 100%;
+    border-top-color: #262626 ;
+    border-right-color: #262626;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+}
+.MuiFilledInput-root::after{
+  border: 2px solid;
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: 0;
+  width: 0;
+  background: transparent;
+  border: 1.3px solid transparent;
+  /* border-radius: 4px; */
+}
+
+.MuiFilledInput-root:hover::after{
+  animation: animate-below 1s linear forwards;
+  animation-delay: 1s;
+}
+
+
+@keyframes animate-below{
+  0%{
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #262626;
+  }
+  50%{
+    width: 0;
+    height: 100%;
+    border-top-color: transparent ;
+    border-right-color: transparent;
+    border-left-color: #262626;
+    border-bottom-color: #262626;
+  }
+  100%{
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent ;
+    border-right-color: transparent;
+    border-left-color: #262626;
+    border-bottom-color: #262626;
+  }
+}
+
+
 .text-field{
+  cursor: pointer;
   text-indent: 2mm;
 }
 
