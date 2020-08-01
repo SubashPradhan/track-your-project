@@ -19,11 +19,60 @@
 }
 
 .MuiOutlinedInput-root{
+  position: relative;
   margin: 12px;
   min-width: 40%;
 }
 
+.MuiOutlinedInput-root::before{
+  border: 2px solid;
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  height: 0;
+  width: 0;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.MuiOutlinedInput-root:hover::before{
+  animation: animate 1s linear forwards;
+}
+.MuiOutlinedInput-adornedStart{
+  outline: none;
+}
+
+@keyframes animate{
+  0%{
+    width: 0;
+    height: 0;
+    border-top-color: #262626 ;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  50%{
+    width: 100%;
+    height: 0;
+    border-top-color: #262626 ;
+    border-right-color: #262626;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+  100%{
+    width: 100%;
+    height: 100%;
+    border-top-color: #262626 ;
+    border-right-color: #262626;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+  }
+}
+
+
 .text-field{
+  cursor: pointer;
   text-indent: 2mm;
 }
 
