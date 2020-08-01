@@ -11,7 +11,7 @@ export default function View() {
           className='text-field'
           label='Email'
           placeholder='Enter your email'
-          variant='outlined'
+          variant='filled'
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -26,7 +26,7 @@ export default function View() {
           className='text-field'
           label='Password'
           placeholder='Enter your password'
-          variant='outlined'
+          variant='filled'
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
