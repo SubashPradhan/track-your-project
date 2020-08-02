@@ -25,25 +25,27 @@
 }
 
 .MuiFormLabel-root{
+  color: #ffffff !important;
   top: 4px !important;
   font-family: Orbitron !important;
   font-size: 1.3em !important;
+  font-weight: 700;
   text-indent: 2mm;
 }
 
 .MuiFormLabel-root.Mui-focused{
   transition: 1s all ease-in-out;
   font-weight: bolder !important;
-  color: white !important;
   text-indent: 1.2rem;
   padding: 5px;
-
 }
 
 .MuiFilledInput-root{
   position: relative;
   margin: 12px;
   border-radius: 4px;
+  text-shadow: 1px 2px black;
+  color: aliceblue !important;
 }
 
 
