@@ -8,8 +8,9 @@ export default function View() {
     <div className='login-container'>
       <form autoComplete='off' className='login-form'>
         <TextField
+          type='text'
           className='text-field'
-          label='Email'
+          label='Email:'
           placeholder='Enter your email'
           variant='filled'
           InputProps={{
@@ -24,7 +25,7 @@ export default function View() {
         <TextField
           type='password'
           className='text-field'
-          label='Password'
+          label='Password:'
           placeholder='Enter your password'
           variant='filled'
           InputProps={{
