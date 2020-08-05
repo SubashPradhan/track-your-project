@@ -3,14 +3,6 @@
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
 
-.project-logo{
-  margin: 0 auto;
-  height: 100px;
-  width: auto;
-  margin-top: 0;
-  /* animation: logo-spin infinite 2s linear; */
-}
-
 @keyframes logo-spin{
   from{
     transform: rotate(0deg);
