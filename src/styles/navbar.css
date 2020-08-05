@@ -90,6 +90,14 @@
     color: linear;
     font-size: 2rem;
     margin: 30px;
+    box-shadow: 5px 5px 5px rgba(254, 173, 166, 0.7);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .link:focus{
+    transform: translate(7%, 7%); 
+    box-shadow: 1px 1px 5px rgba(254, 173, 166, 0.8);
+
   }
 }
 @media screen and (max-width:1024px){
