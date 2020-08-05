@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import Home from '../src/components/Home'
+import { Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Home />
+        <Route path='/' exact component={Home} />
       </div>
     )
   }

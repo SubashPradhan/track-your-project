@@ -9,7 +9,7 @@ export default function View() {
     <div>
       <div className='login-container'>
         <form autoComplete='off' className='login-form'>
-          <img className='project-logo' src={logo} alt='project-tracker-logo'/>
+          {/* <img className='project-logo' src={logo} alt='project-tracker-logo'/> */}
           <TextField
             type='text'
             className='text-field'
