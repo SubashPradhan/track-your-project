@@ -8,9 +8,9 @@ export default function View() {
     <>
       <Navbar />
       <div className="home-container">
-        <div className='text'>
+        <h1 className='text'>
           Manage <i>Your</i> Projects
-      </div>
+      </h1>
         <Login />
       </div>
     </>
