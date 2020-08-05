@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: burlywood;
+  background: linear-gradient(90deg, rgba(254, 173, 166, 0.8), rgba(128, 208, 199, 0.5)); 
   width: 100%;  
-  box-shadow: 1px 1px 4px 5px rgba(128, 208, 199, 0.7); 
+  box-shadow: 1px 1px 4px 5px rgba(190, 224, 223, 0.7); 
   min-height: 8vh;
 }
 
@@ -21,6 +21,10 @@
 .link{
   text-decoration: none;
   letter-spacing: 3px;
+  color: aliceblue;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 .burger-menu{
@@ -60,12 +64,13 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: start;
+    align-items: center; 
     top: 9vh;
     right: 0px;
     height: 100%;
     min-width: 100%;
-    background-color: burlywood;
+    background: linear-gradient(90deg, rgba(8, 8, 8, 0.9), rgba(128, 208, 199, 0.6)); 
     transform: translateX(100%);
     transition: all 0.7s ease-in;
     z-index: 2;
@@ -78,7 +83,14 @@
   
   .nav-active{
     transform: translateX(0%);
+
   }  
+  
+  .link{
+    color: linear;
+    font-size: 2rem;
+    margin: 30px;
+  }
 }
 @media screen and (max-width:1024px){
   .nav-links{
