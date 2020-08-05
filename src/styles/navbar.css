@@ -1,0 +1,84 @@
+.navbar-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: burlywood;
+  width: 100%;  
+  box-shadow: 1px 1px 4px 5px rgba(128, 208, 199, 0.7); 
+  min-height: 8vh;
+}
+
+.project-logo {
+ height: 4rem;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.link{
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+
+.burger-menu{
+  display: none;
+  cursor: pointer;
+}
+
+.burger-menu div{
+  width: 33px;
+  height: 3px;
+  background-color: cornsilk;
+  margin: 5px;
+  transition: all 0.7s ease-in-out;
+
+}
+
+.line-one-clicked{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.line-two-clicked{
+  opacity: 0;
+}
+
+.line-three-clicked{
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width:768px){
+  body{
+    overflow-x: hidden; 
+  }
+  
+  .nav-links{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 8vh;
+    right: 0px;
+    height: 92vh;
+    min-width: 100%;
+    background-color: burlywood;
+    transform: translateX(100%);
+    transition: all 0.7s ease-in;
+    z-index: 2;
+  }
+  
+  .burger-menu{
+    display: block;
+  }
+  
+  .nav-active{
+    transform: translateX(0%);
+  }  
+}
+@media screen and (max-width:1024px){
+  .nav-links{
+    width: 50%;
+  }
+}

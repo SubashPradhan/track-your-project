@@ -16,10 +16,10 @@ body{
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 2rem;
 }
 
 .text{
+  margin-top: 6rem;
   font-family: Orbitron;
   font-size: 3rem;
   color: white;
