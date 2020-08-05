@@ -8,7 +8,7 @@
   height: 100px;
   width: auto;
   margin-top: 0;
-  animation: logo-spin infinite 2s linear;
+  /* animation: logo-spin infinite 2s linear; */
 }
 
 @keyframes logo-spin{
@@ -30,7 +30,7 @@
   display: inline-flex;
   min-width: 40%;
   border-radius: 10px;
-  padding: 5px 30px 10px 30px;
+  padding: 50px 30px 10px 30px;
   background: linear-gradient(90deg, rgba(254, 173, 166, 0.8), rgba(128, 208, 199, 0.2)); 
   font-style: italic !important;
 }
