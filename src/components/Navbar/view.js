@@ -4,12 +4,13 @@ import projectLogo from '../../assets/images/project-logo.png'
 import { Link } from 'react-router-dom'
 
 export default function View(props) {
-  const { handleMenu, menuClicked } = props
+  const { handleMenu, menuClicked, setFocus } = props
+  
   const Links = <div className={menuClicked ? 'nav-links nav-active' : 'nav-links'}>
-    <Link to='/' className='link'>Home</Link>
-    <Link to='/' className='link'>About</Link>
-    <Link to='/' className='link'>Login</Link>
-    <Link to='/' className='link'>Sign-up</Link>
+    <Link to='/' className='link' onClick={setFocus}>Home</Link>
+    <Link to='/' className='link' onClick={setFocus}>About</Link>
+    <Link to='/' className='link' onClick={setFocus}>Login</Link>
+    <Link to='/' className='link' onClick={setFocus}>Sign-up</Link>
   </div>
 
   return (
