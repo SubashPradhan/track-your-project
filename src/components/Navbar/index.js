@@ -3,13 +3,21 @@ import View from './view'
 
 class Navbar extends Component {
   state = {
-    menuClicked: false
+    menuClicked: false,
   }
 
   handleMenu = () => {
     this.setState({
       menuClicked: !this.state.menuClicked
     })
+  }
+
+  // Triggers focus for safari and mobile-devices
+  setFocus = (e) => {
+    const current = e.target
+    if (current){
+      current.focus()
+    }
   }
 
   
@@ -19,6 +27,7 @@ class Navbar extends Component {
         <View 
           menuClicked={this.state.menuClicked}
           handleMenu={this.handleMenu}
+          setFocus={this.setFocus}
         />
       </div>
     )
