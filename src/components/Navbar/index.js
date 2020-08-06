@@ -1,31 +1,26 @@
 import React, { Component } from 'react'
 import View from './view'
+import { connect } from 'react-redux'
+import { getMenuClickedStat } from '../../actions/menuClicked'
 
 class Navbar extends Component {
-  state = {
-    menuClicked: false,
-  }
-
   handleMenu = () => {
-    this.setState({
-      menuClicked: !this.state.menuClicked
-    })
+    this.props.dispatch(getMenuClickedStat())
   }
 
   // Triggers focus for safari and mobile-devices
   setFocus = (e) => {
     const current = e.target
-    if (current){
+    if (current) {
       current.focus()
     }
   }
 
-  
   render() {
     return (
       <div>
-        <View 
-          menuClicked={this.state.menuClicked}
+        <View
+          menuClicked={this.props.menuClicked}
           handleMenu={this.handleMenu}
           setFocus={this.setFocus}
         />
@@ -34,4 +29,11 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar
+const mapStateToProps = state => {
+  return {
+    menuClicked: state.menuClicked
+  }
+}
+
+
+export default connect(mapStateToProps)(Navbar)

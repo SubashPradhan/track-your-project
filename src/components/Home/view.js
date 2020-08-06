@@ -3,11 +3,12 @@ import '../../styles/home.css'
 import Login from '../Login'
 import Navbar from '../Navbar'
 
-export default function View() {
+export default function View(props) {
+  const {menuClicked} = props
   return (
     <>
       <Navbar />
-      <div className="home-container">
+      <div className={!menuClicked ? "home-container" : "home-container home-container-blur"}>
         <h1 className='text'>
           Manage Your Projects
       </h1>
