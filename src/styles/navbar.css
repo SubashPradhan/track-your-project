@@ -2,36 +2,50 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(90deg, rgba(254, 173, 166, 0.8), rgba(128, 208, 199, 0.5)); 
+  background: linear-gradient(45deg, rgba(94, 67, 67, 1), rgba(128, 208, 199, 0.5)); 
   width: 100%;  
-  box-shadow: 1px 1px 4px 5px rgba(190, 224, 223, 0.7); 
+  box-shadow: 1px 1px 4px 5px rgb(16, 34, 33); 
   min-height: 8vh;
 }
 
 .project-logo {
  height: 4rem;
+ transition: all 1s ease-in-out;
+}
+
+.project-logo:hover{
+  animation: rotate-logo 0.7s linear;
+}
+
+@keyframes rotate-logo{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 
 .nav-links{
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 40%;
 }
 
 .link{
   text-decoration: none;
-  letter-spacing: 3px;
-  color: aliceblue;
-  font-size: 1.4rem;
+  letter-spacing: 4px;
+  color: white;
+  font-size: 1.6rem;
   font-style: italic;
   font-weight: bolder;
-  box-shadow: 5px 5px 5px rgba(254, 173, 166, 0.7);
+  box-shadow: 5px 5px 5px rgba(107, 9, 53, 0.7);
   transition: all 0.5s ease-in-out;
 }
 
 .link:focus{
   transform: translate(7%, 7%); 
-  box-shadow: 1px 1px 5px rgba(254, 173, 166, 0.8);
+  box-shadow: 1px 1px 5px rgba(107, 9, 53, 0.8);
   outline: none;
 }
 
@@ -78,7 +92,7 @@
     right: 0px;
     height: 100%;
     min-width: 100%;
-    background: linear-gradient(90deg, rgba(8, 8, 8, 0.9), rgba(128, 208, 199, 0.6)); 
+    background: linear-gradient(45deg, rgba(150, 133, 197, 0.5),  rgba(94, 67, 67, 0.5), rgb(65, 109, 105, 0.5)); 
     transform: translateX(100%);
     transition: all 0.7s ease-in;
     z-index: 2;
@@ -98,7 +112,7 @@
     color: linear;
     font-size: 2rem;
     margin: 30px;
-    box-shadow: 5px 5px 5px rgba(254, 173, 166, 0.7);
+    /* box-shadow: 5px 5px 5px rgba(254, 173, 166, 0.7); */
     transition: all 0.5s ease-in-out;
   }
 
