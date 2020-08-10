@@ -2,18 +2,24 @@ import React from 'react'
 import '../../styles/home.css'
 import Login from '../Login'
 import Navbar from '../Navbar'
+import ProjectImg from '../../assets/images/computer.jpg'
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function View(props) {
-  const {menuClicked} = props
+  const { menuClicked } = props
   return (
     <>
       <Navbar />
-      <div className={!menuClicked ? "home-container" : "home-container home-container-blur"}>
-        <h1 className='text'>
-          Manage Your Projects
-      </h1>
-        <Login />
-      </div>
+      <Container fluid className="home-container">
+        <Row className={menuClicked ? "container-blur" : "blur-background"}>
+          <Col className="header"lg={12}>
+            <h1>Manage Your Projects</h1>
+          </Col>
+          <Col>
+            <Login />
+          </Col>
+        </Row>
+      </Container>
     </>
   )
 }

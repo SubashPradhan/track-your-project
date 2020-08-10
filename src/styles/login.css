@@ -163,6 +163,7 @@
   transition: 2s ease-in-out;
   position: relative;
   overflow: hidden;  
+  font-style: italic;
   background: linear-gradient(90deg, rgba(58, 28, 113, 0.3), rgba(215, 109, 119, 0.7), rgba(255, 175, 123, 0.4));
 }
 
