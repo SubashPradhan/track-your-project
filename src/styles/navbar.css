@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(45deg, rgba(94, 67, 67, 1), rgba(128, 208, 199, 0.5)); 
   width: 100%;  
-  box-shadow: 1px 1px 4px 5px rgb(16, 34, 33); 
   min-height: 8vh;
+  font-family: Orbitron;
+  background: linear-gradient(45deg, rgba(94, 67, 67, 1), rgba(128, 208, 199, 0.5)); 
+  box-shadow: 1px 1px 4px 5px rgb(16, 34, 33); 
 }
 
 .project-logo {
@@ -33,7 +34,6 @@
 }
 
 .link{
-  text-decoration: none;
   letter-spacing: 4px;
   color: white;
   font-size: 1.6rem;
@@ -41,6 +41,11 @@
   font-weight: bolder;
   box-shadow: 5px 5px 5px rgba(107, 9, 53, 0.7);
   transition: all 0.5s ease-in-out;
+}
+
+.link:hover{
+  text-decoration: none;
+  color: white;
 }
 
 .link:focus{
