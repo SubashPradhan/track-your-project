@@ -1,13 +1,27 @@
-  .navbar-container{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;  
-  min-height: 8vh;
-  font-family: Orbitron;
-  background: linear-gradient(45deg, rgba(94, 67, 67, 1), rgba(128, 208, 199, 0.5)); 
-  box-shadow: 1px 1px 4px 5px rgb(16, 34, 33); 
+html,body{
+  overflow-y: hidden;
+  position: relative;
 }
+
+.nav-links{
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center; 
+  right: 0px;
+  height: 100%;
+  min-width: 100%;
+  background: linear-gradient(45deg, rgba(150, 133, 197, 0.5),  rgba(94, 67, 67, 0.5), rgb(65, 109, 105, 0.5)); 
+  transform: translateX(100%);
+  transition: all 0.7s ease-in;
+  z-index: 1;
+}
+
+.nav-active{
+  transform: translateX(0%);
+}  
 
 .project-logo {
  height: 4rem;
@@ -27,18 +41,13 @@
   }
 }
 
-.nav-links{
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
-}
-
 .link{
   letter-spacing: 4px;
   color: white;
   font-size: 1.6rem;
   font-style: italic;
   font-weight: bolder;
+  margin: 30px;
   box-shadow: 5px 5px 5px rgba(107, 9, 53, 0.7);
   transition: all 0.5s ease-in-out;
 }
@@ -54,9 +63,15 @@
   outline: none;
 }
 
+.logo-container{
+  margin-top: 20px;
+  z-index: 2;
+}
+
 .burger-menu{
-  display: none;
+  margin-top: 20px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .burger-menu div{
@@ -78,54 +93,5 @@
 
 .line-three-clicked{
   transform: rotate(45deg) translate(-5px, -6px);
-}
-
-@media screen and (max-width:768px){
-  html,body{
-    overflow-x: hidden;
-    position: relative;
-  }
-  
-  .nav-links{
-    overflow: hidden;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; 
-    top: 9vh;
-    right: 0px;
-    height: 100%;
-    min-width: 100%;
-    background: linear-gradient(45deg, rgba(150, 133, 197, 0.5),  rgba(94, 67, 67, 0.5), rgb(65, 109, 105, 0.5)); 
-    transform: translateX(100%);
-    transition: all 0.7s ease-in;
-    z-index: 2;
-
-  }
-  
-  .burger-menu{
-    display: block;
-  }
-  
-  .nav-active{
-    transform: translateX(0%);
-
-  }  
-  
-  .link{
-    color: linear;
-    font-size: 2rem;
-    margin: 30px;
-    /* box-shadow: 5px 5px 5px rgba(254, 173, 166, 0.7); */
-    transition: all 0.5s ease-in-out;
-  }
-
-}
-
-@media screen and (max-width:1024px){
-  .nav-links{
-    width: 50%;
-  }
 }
 
