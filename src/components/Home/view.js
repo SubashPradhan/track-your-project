@@ -8,18 +8,28 @@ import { Container, Row, Col } from 'react-bootstrap'
 export default function View(props) {
   const { menuClicked } = props
   return (
-    <>
+    <Container fluid className="home-container">
       <Navbar />
-      <Container fluid className="home-container">
-        <Row className={menuClicked ? "container-blur" : "blur-background"}>
-          <Col className="header"lg={12}>
-            <h1>Manage Your Projects</h1>
-          </Col>
-          <Col>
-            <Login />
-          </Col>
-        </Row>
-      </Container>
-    </>
+      <Row className={menuClicked ? "container-blur" : "blur-background"}>
+        <Col className="header">
+          <h1>Manage Your Projects</h1>
+          <div className="introduction">
+            <p>
+              Looking to track your time ?
+            </p>
+            <p>
+              Are you a freelancer working various projects/jobs ?
+            </p>
+            <p>
+              Do you want to save all the works you did, make sure you can
+            </p>
+          </div>
+        </Col>
+        <Col>
+          Hello
+            {/* <Login /> */}
+        </Col>
+      </Row>
+    </Container>
   )
 }
