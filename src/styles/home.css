@@ -33,31 +33,30 @@ h1{
 }
 
 .down-arrow{
-  font-size: 5rem;
   font-weight: bold;
   margin-top: 20px;
   cursor: pointer;
-  transition: 0.7s ease-in-out;
 }
 
 .down-arrow:hover{
-  animation: bounce 0.5s infinite alternate;
-  /* animation: rotate 1s 0.7 linear ; */
-}
-@keyframes rotate{
-  from{
-  }
-  to{
-    transform: rotate(360deg);
-  }
+  animation: bounce 0.4s infinite alternate, rotate 0.8s linear;
 }
 
 @keyframes bounce{
   from{
     transform: translateY(0%);
-    transform: rotateX(30deg);
+    transform: rotateX(45deg);
   }
   to{
     transform: translateY(-30%);
+  }
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
   }
 }
