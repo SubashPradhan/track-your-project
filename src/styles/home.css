@@ -4,6 +4,7 @@
 }
 
 .home-container{
+  margin: 0 auto;
   font-family: Orbitron;
   text-align: center;
   min-height: 100vh;
@@ -29,4 +30,34 @@ h1{
   letter-spacing: 4px;
   color: aliceblue;
   text-shadow: 1px 1.4px 3px #ff8533;
+}
+
+.down-arrow{
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.7s ease-in-out;
+}
+
+.down-arrow:hover{
+  animation: bounce 0.5s infinite alternate;
+  /* animation: rotate 1s 0.7 linear ; */
+}
+@keyframes rotate{
+  from{
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce{
+  from{
+    transform: translateY(0%);
+    transform: rotateX(30deg);
+  }
+  to{
+    transform: translateY(-30%);
+  }
 }
