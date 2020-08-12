@@ -15,13 +15,16 @@ export default function View(props) {
           <h1>Manage Your Projects</h1>
           <div className="introduction">
             <p>
+              Are you a freelancer ?
+            </p>
+            <p>
               Looking to track your time ?
             </p>
             <p>
-              Are you a freelancer working various projects/jobs ?
+              Do you want to save all the works you did ? Why Not ?
             </p>
             <p>
-              Do you want to save all the works you did, make sure you can
+              Then you are at the right place. We make it easy for you to track your hard works all the time.
             </p>
           </div>
         </Col>
