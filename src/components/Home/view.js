@@ -32,7 +32,7 @@ export default function View(props) {
               Want to know more about us keep scrolling...
             </p>
           </div>
-          <ArrowDownwardIcon fontSize='large' className='down-arrow'/>
+          <ArrowDownwardIcon style={{fontSize:'5rem'}} className='down-arrow'/>
         </Col>
         <Col>
           Hello
