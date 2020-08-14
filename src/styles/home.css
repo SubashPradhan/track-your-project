@@ -24,6 +24,10 @@
 .introduction{
   font-size: 1.5rem;
   color: antiquewhite;
+  padding: 30px;
+  margin: 20px;
+  box-sizing: content-box;
+  /* border: 1px solid red; */
 }
 
 h1{
@@ -34,8 +38,9 @@ h1{
 
 .down-arrow{
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 0px;
   cursor: pointer;
+  margin-top: 10%;
 }
 
 .down-arrow:hover{
@@ -59,4 +64,47 @@ h1{
   to{
     transform: rotate(360deg);
   }
+}
+
+.icons{
+  /* margin-top: 200px; */
+  /* display: flexbox; */
+}
+
+.left-icons{
+  margin-left: 200px;
+}
+
+.computer-icon{
+  height: 400px;
+  width: 400px;
+  animation: bounceIcon 1.5s linear;
+}
+
+.coffee-icon{
+  /* margin-right: 100px; */
+  height: 70px;
+  width: 70px;
+  animation: bounceIcon 1.5s linear; 
+}
+
+.glass-icon{
+  height: 70px;
+  width: 70px;
+  top: 700px;
+  animation: bounceIcon 1.5s linear; 
+}
+
+@keyframes bounceIcon{
+  from{
+    transform: translateY(-140%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
+
+.computer-icon:hover{
+  transform: translateY(0%)
 }
