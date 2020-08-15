@@ -68,6 +68,10 @@ h1{
   }
 }
 
+.icons{
+  margin-top: 40px;
+}
+
 .icons img{
   position: absolute;
   animation: bounceIconLeft 2s linear;
@@ -75,29 +79,30 @@ h1{
 
 .phone-icon{
   height: 170px;
-  left: 40%;
+  left: 20%;
   top: 25%;
 }
 
 .time-icon{
   height: 120px;
   width: 100px;
-  top: 20%;
+  left: 30%;
+  top: 25%;
 }
 
 .computer-icon{
   height: 350px;
   width: 350px;
   top: 10%;
+  right: 20%;
 }
 
 .coffee-icon{
   height: 100px;
   width: 100px;
-  left: 45%;
-  top: 70%;
+  left: 35%;
+  top: 75%;
 }
-
 
 .news-paper-icon{
   height: 150px;
@@ -105,14 +110,14 @@ h1{
 }
 
 .glass-icon{
-  right: 1%;
-  top: 75%;
+  right: 10%;
+  top: 70%;
   height: 100px;
 }
 
 @keyframes bounceIconRight{
   from{
-    transform: translate(-700px,-140%);
+    transform: translate(-140%, -140%);
   }
   to{
     transform: translateY(0%);
@@ -121,7 +126,7 @@ h1{
 
 @keyframes bounceIconLeft{
   from{
-    transform: translate(200px,-140%);
+    transform: translate(140%, -140%);
   }
   to{
     transform: translateY(0, 0%);
