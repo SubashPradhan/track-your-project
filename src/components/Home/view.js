@@ -15,9 +15,9 @@ export default function View(props) {
   return (
     <Container fluid className="home-container">
       <Navbar />
+      <h1>Manage Your Projects</h1>
       <Row className={menuClicked ? "container-blur" : "blur-background"}>
         <Col className="header" lg={6}>
-          <h1>Manage Your Projects</h1>
           <div className="introduction">
             <p className='text-left'>
               Are you a freelancer ?
@@ -36,17 +36,17 @@ export default function View(props) {
               Want to know more about us keep scrolling...
             </p>
           </div>
-            <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} className='down-arrow' />
         </Col>
         <Col className="icons" xs lg={6}>
-            <img src={PhoneIcon} alt="Phone Icon" className="phone-icon"/>
-            <img src={TimeIcon} alt="Time Icon" className="time-icon" />
-            <img src={GlassIcon} alt="Glass Icon" className="glass-icon" />
-            <img src={CoffeeIcon} alt="Coffee Icon" className="coffee-icon" />
-            <img src={NewsPaperIcon} alt="NewsPaper Icon" className="news-paper-icon " />
-            <img src={ComputerIcon} alt="Computer Icon" className="computer-icon" />
+          <img src={PhoneIcon} alt="Phone Icon" className="phone-icon" />
+          <img src={TimeIcon} alt="Time Icon" className="time-icon" />
+          <img src={GlassIcon} alt="Glass Icon" className="glass-icon" />
+          <img src={CoffeeIcon} alt="Coffee Icon" className="coffee-icon" />
+          <img src={NewsPaperIcon} alt="NewsPaper Icon" className="news-paper-icon " />
+          <img src={ComputerIcon} alt="Computer Icon" className="computer-icon" />
         </Col>
       </Row>
+      <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} className='down-arrow' />
     </Container>
   )
 }

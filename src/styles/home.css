@@ -14,6 +14,9 @@
 
 .header{
   margin-top: 50px;
+}
+
+.introduction p{
   animation: bounceIconRight 2s linear;
 }
 
@@ -23,6 +26,7 @@
 }
 
 .introduction{
+  overflow: hidden;
   font-size: 1.5rem;
   color: antiquewhite;
   padding: 30px;
@@ -38,9 +42,7 @@ h1{
 
 .down-arrow{
   font-weight: bold;
-  margin-top: 0px;
   cursor: pointer;
-  margin-top: 10%;
 }
 
 .down-arrow:hover{
@@ -73,6 +75,14 @@ h1{
 
 .phone-icon{
   height: 170px;
+  left: 40%;
+  top: 25%;
+}
+
+.time-icon{
+  height: 120px;
+  width: 100px;
+  top: 20%;
 }
 
 .computer-icon{
@@ -84,30 +94,25 @@ h1{
 .coffee-icon{
   height: 100px;
   width: 100px;
-  top: 50%;
+  left: 45%;
+  top: 70%;
 }
 
-.time-icon{
-  height: 100px;
-  width: 100px;
-  top: 20%;
-}
 
 .news-paper-icon{
   height: 150px;
-  top: 35%;
-  left: 20%;
+  top: 80%;
 }
 
 .glass-icon{
-  top: 20%;
-  left: 25%;
+  right: 1%;
+  top: 75%;
   height: 100px;
 }
 
 @keyframes bounceIconRight{
   from{
-    transform: translate(-200px,-140%);
+    transform: translate(-700px,-140%);
   }
   to{
     transform: translateY(0%);
@@ -119,12 +124,21 @@ h1{
     transform: translate(200px,-140%);
   }
   to{
-    transform: translateY(0%);
+    transform: translateY(0, 0%);
   }
 }
 
 @media screen and (max-width: 600px){
+  .home-container{
+    background: url('../assets/images/Computer1.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: purple;
+  }
+
   .icons{
-    position: absolute;
+    display: none;
   }
 }
