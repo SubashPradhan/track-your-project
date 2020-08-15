@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/navbar.css'
 import projectLogo from '../../assets/images/project-logo.png'
 import { Link } from 'react-router-dom'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row} from 'react-bootstrap'
 
 
 export default function View(props) {

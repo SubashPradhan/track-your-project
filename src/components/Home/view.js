@@ -1,12 +1,12 @@
 import React from 'react'
 import '../../styles/home.css'
-import Login from '../Login'
 import Navbar from '../Navbar'
 import ComputerIcon from '../../assets/images/Computer1.png'
 import CoffeeIcon from '../../assets/images/Coffee1.png'
 import GlassIcon from '../../assets/images/Glasses1.png'
 import NewsPaperIcon from '../../assets/images/Newspaper1.png'
-import GraphicIcon from '../../assets/images/Graphics1.png'
+import PhoneIcon from '../../assets/images/Phone1.png'
+import TimeIcon from '../../assets/images/Project1.png'
 import { Container, Row, Col } from 'react-bootstrap'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
@@ -16,7 +16,7 @@ export default function View(props) {
     <Container fluid className="home-container">
       <Navbar />
       <Row className={menuClicked ? "container-blur" : "blur-background"}>
-        <Col className="header">
+        <Col className="header" lg={6}>
           <h1>Manage Your Projects</h1>
           <div className="introduction">
             <p className='text-left'>
@@ -35,17 +35,16 @@ export default function View(props) {
             <p className='text-left'>
               Want to know more about us keep scrolling...
             </p>
-            <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} className='down-arrow' />
           </div>
+            <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} className='down-arrow' />
         </Col>
-        <Col className="icons">
-          <img src={GraphicIcon} alt="Graphic Icon" className="graphic-icon" />
-          <img src={ComputerIcon} alt="Computer Icon" className="computer-icon" />
-          <div className='left-icons'>
-            <img src={NewsPaperIcon} alt="NewsPaper Icon" className="news-paper-icon " />
+        <Col className="icons" xs lg={6}>
+            <img src={PhoneIcon} alt="Phone Icon" className="phone-icon"/>
+            <img src={TimeIcon} alt="Time Icon" className="time-icon" />
             <img src={GlassIcon} alt="Glass Icon" className="glass-icon" />
             <img src={CoffeeIcon} alt="Coffee Icon" className="coffee-icon" />
-          </div>
+            <img src={NewsPaperIcon} alt="NewsPaper Icon" className="news-paper-icon " />
+            <img src={ComputerIcon} alt="Computer Icon" className="computer-icon" />
         </Col>
       </Row>
     </Container>

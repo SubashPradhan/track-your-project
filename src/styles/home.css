@@ -14,6 +14,7 @@
 
 .header{
   margin-top: 50px;
+  animation: bounceIconRight 2s linear;
 }
 
 .container-blur{
@@ -27,7 +28,6 @@
   padding: 30px;
   margin: 20px;
   box-sizing: content-box;
-  /* border: 1px solid red; */
 }
 
 h1{
@@ -66,45 +66,65 @@ h1{
   }
 }
 
-.icons{
-  /* margin-top: 200px; */
-  /* display: flexbox; */
+.icons img{
+  position: absolute;
+  animation: bounceIconLeft 2s linear;
 }
 
-.left-icons{
-  margin-left: 200px;
+.phone-icon{
+  height: 170px;
 }
 
 .computer-icon{
-  height: 400px;
-  width: 400px;
-  animation: bounceIcon 1.5s linear;
+  height: 350px;
+  width: 350px;
+  top: 10%;
 }
 
 .coffee-icon{
-  /* margin-right: 100px; */
-  height: 70px;
-  width: 70px;
-  animation: bounceIcon 1.5s linear; 
+  height: 100px;
+  width: 100px;
+  top: 50%;
+}
+
+.time-icon{
+  height: 100px;
+  width: 100px;
+  top: 20%;
+}
+
+.news-paper-icon{
+  height: 150px;
+  top: 35%;
+  left: 20%;
 }
 
 .glass-icon{
-  height: 70px;
-  width: 70px;
-  top: 700px;
-  animation: bounceIcon 1.5s linear; 
+  top: 20%;
+  left: 25%;
+  height: 100px;
 }
 
-@keyframes bounceIcon{
+@keyframes bounceIconRight{
   from{
-    transform: translateY(-140%);
+    transform: translate(-200px,-140%);
   }
   to{
     transform: translateY(0%);
   }
 }
 
+@keyframes bounceIconLeft{
+  from{
+    transform: translate(200px,-140%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
 
-.computer-icon:hover{
-  transform: translateY(0%)
+@media screen and (max-width: 600px){
+  .icons{
+    position: absolute;
+  }
 }
