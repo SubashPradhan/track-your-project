@@ -100,6 +100,7 @@
     border-bottom-color: transparent;
   }
 }
+
 .MuiFilledInput-root::after{
   content: '';
   position: absolute;
@@ -117,7 +118,6 @@
   animation-delay: 0.7s;
   background-image: linear-gradient(90deg, rgba(58, 207, 213, 0.1), rgba(58, 78, 213, 0.2), rgba(247, 187, 67, 0.2));
 }
-
 
 @keyframes animate-below{
   0%{
@@ -145,7 +145,6 @@
     border-bottom-color: rgba(254, 173, 166, 0.8);;
   }
 }
-
 
 .text-field{
   cursor: pointer;

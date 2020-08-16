@@ -20,6 +20,15 @@
   animation: bounceIconLeft 2s linear;
 }
 
+@keyframes bounceIconLeft{
+  from{
+    transform: translate(-140%, -140%);
+  }
+  to{
+    transform: translateY(0, 0%);
+  }
+}
+
 .container-blur{
   filter: blur(10px);
   transition: all 1.2s ease-in-out;
@@ -68,70 +77,34 @@ h1{
   }
 }
 
-/* .icons{
-  margin-top: 40px;
-} */
-
-.icons img{
-  height: 100%;
+.background-home{
+  margin-top: 10%;
   width: 70%;
-  /* position: absolute; */
-  /* animation: bounceIconLeft 2s linear; */
+  height: 60%;
+  border-radius: 70% 27% 26% 38% / 73% 36% 64% 27% ;
+  background: linear-gradient(45deg, rgba(103, 240, 69, 0.6), rgba(208, 215, 109, 0.7), rgba(255, 123, 152, 0.8));
+  transition: all 0.6s ease-in-out;
 }
 
-.phone-icon{
-  height: 170px;
-  left: 20%;
-  top: 25%;
+.background-home:hover{
+  animation: blob 5s infinite ease-in-out;
 }
 
-.time-icon{
-  height: 120px;
-  width: 100px;
-  left: 30%;
-  top: 25%;
-}
-
-.computer-icon{
-  height: 350px;
-  width: 350px;
-  top: 10%;
-  right: 20%;
-}
-
-.coffee-icon{
-  height: 100px;
-  width: 100px;
-  left: 35%;
-  top: 75%;
-}
-
-.news-paper-icon{
-  height: 150px;
-  top: 80%;
-}
-
-.glass-icon{
-  right: 10%;
-  top: 70%;
-  height: 100px;
-}
-
-@keyframes bounceIconRight{
-  from{
-    transform: translate(-140%, -140%);
+@keyframes blob{
+  0%,100%{
+    border-radius: 73% 27% 26% 38% / 73% 36% 64% 27% ;
   }
-  to{
-    transform: translateY(0%);
+  25%{
+    border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%; 
+    background: linear-gradient(75deg, rgba(103, 240, 69, 0.6), rgba(208, 215, 109, 0.7), rgba(255, 123, 152, 0.8));
   }
-}
-
-@keyframes bounceIconLeft{
-  from{
-    transform: translate(-140%, -140%);
+  50%{
+    border-radius: 40% 60% 70% 30% / 47% 62% 38% 53%; 
+    background: linear-gradient(105deg, rgba(103, 240, 69, 0.6), rgba(208, 215, 109, 0.7), rgba(255, 123, 152, 0.8));
   }
-  to{
-    transform: translateY(0, 0%);
+  75%{
+    border-radius: 30% 50% 30% 40% / 41% 34% 57% 47%; 
+    background: linear-gradient(135deg, rgba(103, 240, 69, 0.6), rgba(208, 215, 109, 0.7), rgba(255, 123, 152, 0.8));
   }
 }
 
@@ -143,9 +116,5 @@ h1{
     background-repeat: no-repeat;
     background-size: contain;
     background-color: purple;
-  }
-
-  .icons{
-    display: none;
   }
 }
