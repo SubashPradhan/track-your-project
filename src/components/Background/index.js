@@ -6,7 +6,6 @@ class Background extends Component {
     return (
       <div>
         <View />
-
       </div>
     )
   }
