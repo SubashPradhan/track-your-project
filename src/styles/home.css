@@ -17,7 +17,7 @@
 }
 
 .introduction p{
-  animation: bounceIconRight 2s linear;
+  animation: bounceIconLeft 2s linear;
 }
 
 .container-blur{
@@ -68,13 +68,15 @@ h1{
   }
 }
 
-.icons{
+/* .icons{
   margin-top: 40px;
-}
+} */
 
 .icons img{
-  position: absolute;
-  animation: bounceIconLeft 2s linear;
+  height: 100%;
+  width: 70%;
+  /* position: absolute; */
+  /* animation: bounceIconLeft 2s linear; */
 }
 
 .phone-icon{
@@ -126,7 +128,7 @@ h1{
 
 @keyframes bounceIconLeft{
   from{
-    transform: translate(140%, -140%);
+    transform: translate(-140%, -140%);
   }
   to{
     transform: translateY(0, 0%);

@@ -9,6 +9,7 @@ import PhoneIcon from '../../assets/images/Phone1.png'
 import TimeIcon from '../../assets/images/Project1.png'
 import { Container, Row, Col } from 'react-bootstrap'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import Background from '../Background'
 
 export default function View(props) {
   const { menuClicked } = props
@@ -37,13 +38,14 @@ export default function View(props) {
             </p>
           </div>
         </Col>
-        <Col className="icons" xs lg={6} sm md={12}>
-          <img src={PhoneIcon} alt="Phone Icon" className="phone-icon" />
+        <Col lg={6}>
+          {/* <img src={PhoneIcon} alt="Phone Icon" className="phone-icon" />
           <img src={TimeIcon} alt="Time Icon" className="time-icon" />
           <img src={GlassIcon} alt="Glass Icon" className="glass-icon" />
           <img src={CoffeeIcon} alt="Coffee Icon" className="coffee-icon" />
           <img src={NewsPaperIcon} alt="NewsPaper Icon" className="news-paper-icon " />
-          <img src={ComputerIcon} alt="Computer Icon" className="computer-icon" />
+          <img src={ComputerIcon} alt="Computer Icon" className="computer-icon" /> */}
+          <Background className="icons" />
         </Col>
       </Row>
       <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} className='down-arrow' />
