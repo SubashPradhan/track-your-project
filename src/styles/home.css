@@ -27,7 +27,7 @@
 
 .introduction{
   overflow: hidden;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: antiquewhite;
   padding: 30px;
   margin: 20px;
@@ -133,7 +133,7 @@ h1{
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1024px){
   .home-container{
     background: url('../assets/images/Computer1.png');
     background-attachment: fixed;

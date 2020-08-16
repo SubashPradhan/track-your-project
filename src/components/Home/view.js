@@ -17,27 +17,27 @@ export default function View(props) {
       <Navbar />
       <h1>Manage Your Projects</h1>
       <Row className={menuClicked ? "container-blur" : "blur-background"}>
-        <Col className="header" lg={6}>
-          <div className="introduction">
-            <p className='text-left'>
+        <Col className="header" lg={6} sm md={12}>
+          <div className="introduction text-center">
+            <p >
               Are you a freelancer ?
             </p>
-            <p className='text-left'>
+            <p >
               Looking to track your time ?
             </p>
-            <p className='text-left'>
+            <p>
               Looking to track all the hard works you did ?
             </p>
-            <p className='text-left'>
+            <p>
               Then you are at the right place. We make it easy for you to track all your hard works
               and make sure that you don't miss a penny.
             </p>
-            <p className='text-left'>
+            <p>
               Want to know more about us keep scrolling...
             </p>
           </div>
         </Col>
-        <Col className="icons" xs lg={6}>
+        <Col className="icons" xs lg={6} sm md={12}>
           <img src={PhoneIcon} alt="Phone Icon" className="phone-icon" />
           <img src={TimeIcon} alt="Time Icon" className="time-icon" />
           <img src={GlassIcon} alt="Glass Icon" className="glass-icon" />
