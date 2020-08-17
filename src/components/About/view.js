@@ -1,20 +1,23 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import AboutImg from '../../assets/images/research.svg'
+import '../../styles/about.css'
 
 const View = () => {
   return <>
-    <Container fluid style={{ background: 'red' }}>
-    <h2 align='center'>What We Do</h2>
+    <Container fluid className="about">
+    <h2 align='center'>About Us</h2>
       <Row>
-        <Col>
+        <Col className="about-img">
+          <img src={AboutImg} alt="About Image" />
         </Col>
         <Col>
-        <p className='about-text'>
+        <p className='about-text text-center'>
           This app is specialized in tracking time of your work.
-          As a freelancer myself, I have been working on various projects.
-          Sometimes it can be difficult to keep track of times for all the different projects.
+          As a freelancer working on various projects,
+          it can be difficult sometimes to keep track of the times.
           Which can be confusing resulting lost of your work and money.
-          So, to come up with adigital solution, I came up with this app Project Management.
+          So, to come up with a digital solution, I came up with this app Project Management.
           This app allows you to register various projects that you are working on and allows
           you to keep daily records of the hours you work per day.
           The hours can be entered maunally per projects and per day.
