@@ -87,7 +87,7 @@ h1{
 }
 
 .background-home:hover{
-  animation: blob 5s infinite ease-in-out;
+  animation: blob 15s infinite ease-in-out;
 }
 
 @keyframes blob{

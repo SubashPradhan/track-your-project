@@ -8,7 +8,7 @@ html,body{
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: start;
   align-items: center; 
   right: 0px;
   height: 100%;
@@ -75,23 +75,37 @@ html,body{
 }
 
 .burger-menu div{
-  width: 33px;
+  /* width: 33px; */
   height: 3px;
   background-color: cornsilk;
   margin: 5px;
-  transition: all 0.7s ease-in-out;
+  transition: all 1s ease-in-out;
+}
 
+.line-one {
+  width: 10px
+}
+
+.line-two {
+  width: 20px
+}
+
+.line-three {
+  width: 30px
 }
 
 .line-one-clicked{
+  width: 30px;
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .line-two-clicked{
+  width: 0;
   opacity: 0;
 }
 
 .line-three-clicked{
+  width: 30px;
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
