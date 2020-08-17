@@ -4,10 +4,11 @@ import Navbar from '../Navbar'
 import { Container, Row, Col } from 'react-bootstrap'
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Background from '../Background'
+import About from '../About'
 
 export default function View(props) {
   const { menuClicked } = props
-  return (
+  return <>
     <Container fluid className="home-container">
       <Navbar />
       <h1>Manage Your Projects</h1>
@@ -32,5 +33,6 @@ export default function View(props) {
       </Row>
       <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} className='down-arrow' />
     </Container>
-  )
+    <About />
+    </>
 }
