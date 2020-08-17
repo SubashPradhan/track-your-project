@@ -3,13 +3,14 @@
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
 
+
 .home-container{
   margin: 0 auto;
   font-family: Orbitron;
   text-align: center;
   min-height: 100vh;
   font-style: italic;
-  background:linear-gradient(45deg, rgba(107, 9, 53, 0.7), rgba(3,4,5, 0.8), rgba(124, 82, 179,1));
+  /* background:linear-gradient(45deg, rgba(107, 9, 53, 0.7), rgba(3,4,5, 0.8), rgba(124, 82, 179,1)); */
 }
 
 .header{
@@ -37,7 +38,7 @@
 .introduction{
   overflow: hidden;
   font-size: 1.7rem;
-  color: antiquewhite;
+  /* color: antiquewhite; */
   padding: 30px;
   margin: 20px;
   box-sizing: content-box;
@@ -45,7 +46,7 @@
 
 h1{
   letter-spacing: 4px;
-  color: aliceblue;
+  /* color: aliceblue; */
   text-shadow: 1px 1.4px 3px #ff8533;
 }
 
@@ -79,7 +80,7 @@ h1{
 
 .background-home{
   margin-top: 10%;
-  width: 70%;
+  width: 80%;
   height: 60%;
   border-radius: 70% 27% 26% 38% / 73% 36% 64% 27% ;
   background: linear-gradient(45deg, rgba(103, 240, 69, 0.6), rgba(208, 215, 109, 0.7), rgba(255, 123, 152, 0.8));
@@ -87,7 +88,7 @@ h1{
 }
 
 .background-home:hover{
-  animation: blob 15s infinite ease-in-out;
+  animation: blob 10s infinite ease-in-out;
 }
 
 @keyframes blob{
@@ -116,5 +117,9 @@ h1{
     background-repeat: no-repeat;
     background-size: contain;
     background-color: purple;
+  }
+
+  .background-home{
+    display: none;
   }
 }

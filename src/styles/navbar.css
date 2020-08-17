@@ -69,15 +69,14 @@ html,body{
 }
 
 .burger-menu{
-  margin-top: 20px;
+  margin-top: 30px;
   cursor: pointer;
   z-index: 2;
 }
 
 .burger-menu div{
-  /* width: 33px; */
   height: 3px;
-  background-color: cornsilk;
+  background-color: darkblue;
   margin: 5px;
   transition: all 1s ease-in-out;
 }
