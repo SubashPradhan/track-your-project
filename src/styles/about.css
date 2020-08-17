@@ -13,12 +13,17 @@ h2{
 .about{
   font-family: Orbitron;
   font-style: italic;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
 .about-text{
   padding: 1.6rem;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+}
+
+p:hover{
+  transition: all 1s ease-in-out;
+  transform: scale(1.05)
 }
 
 .about-img{
