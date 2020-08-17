@@ -6,7 +6,7 @@ import '../../styles/about.css'
 const View = () => {
   return <>
     <Container fluid className="about">
-    <h2 align='center'>About Us</h2>
+    <h2 align='center'>About us</h2>
       <Row>
         <Col className="about-img">
           <img src={AboutImg} alt="About Image" />
