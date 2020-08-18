@@ -1,0 +1,52 @@
+svg{
+  animation: blink 2s linear;
+}
+
+@keyframes blink{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.25;
+  }
+  75%{
+    opacity: 0.50;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#person{
+  animation: falldown 3s ease;
+}
+
+@keyframes falldown{
+  from{
+    transform: translate(140%, -140%);
+  }
+  to{
+    transform: translate(0, 0);
+  }
+}
+
+#seconds{
+  animation: clock-movement 60s infinite linear;
+  transform-origin: center;
+}
+
+@keyframes clock-movement{
+  from {
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+
+@media screen and (max-width: 1024px){
+  #first-img{
+    width: 350px;
+    height: 350px;
+  }
+}
