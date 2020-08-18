@@ -11,9 +11,8 @@ const View = () => {
       <h2 align='center'>About us</h2>
       <Row>
         <Col className="about-img">
-          <Flip left>
-
-            <img src={AboutImg} alt="About Image" />
+          <Flip left> 
+            <img src={AboutImg} alt="About" />
           </Flip>
         </Col>
         <Col>
