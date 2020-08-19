@@ -3,13 +3,22 @@
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
 
-.container-blur{
+.home-heading{
+  letter-spacing: 4px;
+  font-size: 3rem;
+  text-shadow: 1px 1.4px 3px #ff8533;
+  transition: all 1.2s ease-in-out;
+}
+
+.container-blur, .home-heading-blur{
   filter: blur(10px);
   transition: all 1.2s ease-in-out;
 }
 
 .container-blur, .blur-background{
   margin-top: 10%;
+  transition: all 1.2s ease-in-out;
+
 }
 
 .home-container{
@@ -57,12 +66,6 @@
   to{
     transform: translateY(0, 0%);
   }
-}
-
-.home-heading{
-  letter-spacing: 4px;
-  font-size: 3rem;
-  text-shadow: 1px 1.4px 3px #ff8533;
 }
 
 .down-arrow{
@@ -127,11 +130,11 @@
   .background-home{
     margin-top: 0;
   }
+
   .container-blur, .blur-background{
     margin-top: 0;
   }
 
-  
   .introduction{
     margin: 0;
   }

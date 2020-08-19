@@ -11,7 +11,7 @@ export default function View(props) {
   return <>
     <Container fluid className="home-container">
       <Navbar />
-      <h1 className="home-heading">Manage Your Projects</h1>
+      <h1 className={menuClicked ? "home-heading home-heading-blur" : "home-heading"}>Manage Your Projects</h1>
       <Row className={menuClicked ? "container-blur" : "blur-background"}>
         <Col lg={6} sm md={12}>
           <div className="introduction text-center">
