@@ -3,6 +3,13 @@
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
 
+.home-container{
+  height: 100vh;
+  font-family: Orbitron;
+  text-align: center;
+  font-style: italic;
+}
+
 .home-heading{
   letter-spacing: 4px;
   font-size: 3rem;
@@ -10,51 +17,60 @@
   transition: all 1.2s ease-in-out;
 }
 
-.container-blur, .home-heading-blur{
+.home-background{
+  width: 80%;
+  height: 60%;
+  margin-left: 10%;
+  border-radius: 70% 27% 26% 38% / 73% 36% 64% 27% ;
+  background: linear-gradient(45deg, rgba(103, 240, 69, 0.6), rgba(208, 215, 109, 0.7), rgba(255, 123, 152, 0.8));
+  transition: all 0.6s ease-in-out;
+}
+
+.home-background:hover{
+  animation: blob 10s infinite ease-in-out;
+}
+
+.home-content-blur, .home-heading-blur{
   filter: blur(10px);
-  transition: all 1.2s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
-.container-blur{
-  margin-top: 10%;
+.home-content{
+  margin-top: 5%;
   transition: all 1.2s ease-in-out;
-}
-
-.home-container{
-  margin: 0 auto;
-  font-family: Orbitron;
-  text-align: center;
-  font-style: italic;
 }
 
 .introduction{
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
+  padding: 20px;
   margin: 0 20px 0 20px;
 }
 
 .introduction p:first-child{
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: 4px;
-}
-
-.introduction p:first-child::before, p:first-child::after{
-  font-size: 3.5rem;  
-}
-
-.introduction p:first-child::before{
-  content: open-quote;
-}
-
-.introduction p:first-child::after{
-  content: close-quote;
+  letter-spacing: 2.5px;
 }
 
 .introduction p:nth-child(2){
-  font-size: 1.7rem;
-  letter-spacing: 4px;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin-top: 10%;
+  animation: bounceIconLeft 2s linear;
+}
+
+.introduction p:nth-child(2)::before, p:nth-child(2)::after{
+  font-size: 2rem;  
+}
+
+.introduction p:nth-child(2)::before{
+  content: open-quote;
+}
+
+.introduction p:nth-child(2)::after{
+  content: close-quote;
+}
+
+.introduction p:nth-child(3){
   animation: bounceIconLeft 2s linear;
 }
 
@@ -95,18 +111,6 @@
   }
 }
 
-.background-home{
-  width: 80%;
-  height: 60%;
-  border-radius: 70% 27% 26% 38% / 73% 36% 64% 27% ;
-  background: linear-gradient(45deg, rgba(103, 240, 69, 0.6), rgba(208, 215, 109, 0.7), rgba(255, 123, 152, 0.8));
-  transition: all 0.6s ease-in-out;
-}
-
-.background-home:hover{
-  animation: blob 10s infinite ease-in-out;
-}
-
 @keyframes blob{
   0%,100%{
     border-radius: 73% 27% 26% 38% / 73% 36% 64% 27% ;
@@ -126,11 +130,16 @@
 }
 
 @media screen and (max-width: 1024px){
-  .background-home{
-    margin-top: 0;
+  .home-container{
+    height: auto;
   }
 
-  .container-blur, .blur-background{
+  .home-background{
+    width: 100%;
+    height: 60%;
+    margin: 0;
+  }
+  .background-home{
     margin-top: 0;
   }
 
@@ -153,4 +162,11 @@
     letter-spacing: 2.5px;
   }
 
+
+}
+
+@media screen and (max-width: 600px){
+  .home-heading{
+    margin-top: 10%;
+  }
 }
