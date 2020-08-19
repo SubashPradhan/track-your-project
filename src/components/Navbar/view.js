@@ -9,7 +9,7 @@ export default function View(props) {
 
   const Links = <div className={menuClicked ? 'nav-links nav-active' : 'nav-links'}>
     <Link to='/' className='link' onClick={setFocus}>Home</Link>
-    <Link to='/about' className='link' onClick={setFocus}>About</Link>
+    <Link to='/' className='link' onClick={setFocus}>About</Link>
     <Link to='/' className='link' onClick={setFocus}>Login</Link>
     <Link to='/' className='link' onClick={setFocus}>Sign-up</Link>
   </div>
