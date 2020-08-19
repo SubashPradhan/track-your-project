@@ -4,10 +4,6 @@
 }
 
 .about-container{
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
   font-family: Orbitron;
   font-style: italic;
   height: 100vh;
@@ -18,12 +14,13 @@
   font-style: italic;
   letter-spacing: 4px;
   text-shadow: 1px 1.4px 3px #ff8533;
-  /* margin-bottom: 10%; */
+  margin-top: 5%;
 }
 
 .about-content{
   margin-top: 5%;
   padding: 30px;
+  text-align: center;
 }
 
 .about-text{
@@ -41,6 +38,7 @@ p:hover{
   .about-container{
     height: auto;
   }
+  
   .about-content{
     margin-top: 20%
   }
