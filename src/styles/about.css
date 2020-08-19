@@ -3,31 +3,47 @@
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
 
-h2{
-  letter-spacing: 4px;
+.about-heading{
+  font-size: 3rem;
   font-style: italic;
+  letter-spacing: 4px;
   text-shadow: 1px 1.4px 3px #ff8533;
-
 }
 
-.about{
+.about-container{
   font-family: Orbitron;
   font-style: italic;
   margin-top: 3%;
 }
 
-.about-text{
-  padding: 1.6rem;
-  font-size: 1.6rem;
+.about-content{
+  margin-top: 3%;
+  padding: 30px;
 }
+
+.about-img{
+  /* margin-left: 50px   */
+}
+
+.about-text{
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+}
+
+
 
 p:hover{
   transition: all 1s ease-in-out;
   transform: scale(1.05)
 }
 
-.about-img{
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
+@media screen and (max-width:1024px){
+  .about-content{
+    margin-top: 20%
+  }
+
+  .about-text{
+    margin-top: 20%;
+  }
 }
