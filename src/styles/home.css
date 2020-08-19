@@ -15,10 +15,9 @@
   transition: all 1.2s ease-in-out;
 }
 
-.container-blur, .blur-background{
+.container-blur{
   margin-top: 10%;
   transition: all 1.2s ease-in-out;
-
 }
 
 .home-container{
