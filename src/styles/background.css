@@ -43,10 +43,3 @@ svg{
     transform: rotateZ(360deg);
   }
 }
-
-@media screen and (max-width: 1024px){
-  #first-img{
-    width: 350px;
-    height: 350px;
-  }
-}

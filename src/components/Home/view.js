@@ -11,28 +11,26 @@ export default function View(props) {
   return <>
     <Container fluid className="home-container">
       <Navbar />
-      <h1>Manage Your Projects</h1>
+      <h1 className="home-heading">Manage Your Projects</h1>
       <Row className={menuClicked ? "container-blur" : "blur-background"}>
-        <Col className="header" lg={6} sm md={12}>
+        <Col lg={6} sm md={12}>
           <div className="introduction text-center">
-            <p>Are you a freelancer ?</p>
-            <p>Looking to track your time ?</p>
-            <p>Looking to track all the hard works you did ?</p>
             <p>
-              Then you are at the right place. We make it easy for you to track all your hard works
-              and make sure that you don't miss a penny.
+              Time is precious
             </p>
-            <p>Want to know more about us keep scrolling...</p>
+            <p>  
+              We are here with the solution to track all your valuable time.
+            </p>
           </div>
         </Col>
         <Col lg={6}>
           <div className="background-home">
-            <Background className="icons" />
+            <Background className="icons img-fluid" />
           </div>
         </Col>
       </Row>
-      <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} className='down-arrow' />
+      {/* <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} className='down-arrow' /> */}
     </Container>
     <About />
-    </>
+  </>
 }

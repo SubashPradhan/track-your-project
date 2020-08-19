@@ -3,21 +3,50 @@
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
 
+.container-blur{
+  filter: blur(10px);
+  transition: all 1.2s ease-in-out;
+}
+
+.container-blur, .blur-background{
+  margin-top: 10%;
+}
 
 .home-container{
   margin: 0 auto;
   font-family: Orbitron;
   text-align: center;
-  /* min-height: 100vh; */
   font-style: italic;
-  /* background:linear-gradient(45deg, rgba(107, 9, 53, 0.7), rgba(3,4,5, 0.8), rgba(124, 82, 179,1)); */
 }
 
-.header{
-  margin-top: 50px;
+.introduction{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 0 20px 0 20px;
 }
 
-.introduction p{
+.introduction p:first-child{
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.introduction p:first-child::before, p:first-child::after{
+  font-size: 3.5rem;  
+}
+
+.introduction p:first-child::before{
+  content: open-quote;
+}
+
+.introduction p:first-child::after{
+  content: close-quote;
+}
+
+.introduction p:nth-child(2){
+  font-size: 1.7rem;
+  letter-spacing: 4px;
   animation: bounceIconLeft 2s linear;
 }
 
@@ -30,22 +59,9 @@
   }
 }
 
-.container-blur{
-  filter: blur(10px);
-  transition: all 1.2s ease-in-out;
-}
-
-.introduction{
-  font-size: 1.6rem;
-  /* color: antiquewhite; */
-  padding: 30px;
-  margin: 20px;
-  box-sizing: content-box;
-}
-
-h1{
+.home-heading{
   letter-spacing: 4px;
-  /* color: aliceblue; */
+  font-size: 3rem;
   text-shadow: 1px 1.4px 3px #ff8533;
 }
 
@@ -78,7 +94,6 @@ h1{
 }
 
 .background-home{
-  margin-top: 10%;
   width: 80%;
   height: 60%;
   border-radius: 70% 27% 26% 38% / 73% 36% 64% 27% ;
@@ -109,13 +124,31 @@ h1{
 }
 
 @media screen and (max-width: 1024px){
-  /* .home-container{s */
-
   .background-home{
     margin-top: 0;
   }
-
-  .header{
+  .container-blur, .blur-background{
     margin-top: 0;
   }
+
+  
+  .introduction{
+    margin: 0;
+  }
+
+  .introduction p:first-child::before, p:first-child::after{
+    font-size: 2rem;  
+  }
+
+  .introduction p:first-child{
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+
+  .introduction p:nth-child(2){
+    font-size: 1.4rem;
+    letter-spacing: 2.5px;
+  }
+
 }

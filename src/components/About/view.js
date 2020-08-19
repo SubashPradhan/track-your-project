@@ -7,26 +7,27 @@ import { Flip, Fade } from 'react-reveal';
 
 const View = () => {
   return <>
-    <Container fluid className="about">
-      <h2 align='center'>About us</h2>
-      <Row>
-        <Col className="about-img">
-          <Flip left> 
-            <img src={AboutImg} alt="About" />
+    <Container fluid className="about-container">
+      <h2 className="about-heading text-center">About us</h2>
+      <Row className="about-content">
+        <Col className="about-img" sm md xs ={12}>
+          <Flip left>
+            <img src={AboutImg} alt="About"  className="img-fluid"/>
           </Flip>
         </Col>
-        <Col>
-          <Fade right>
-            <p className='about-text text-center'>
-              This app is specialized in tracking time of your work.
-              As a freelancer working on various projects,
-              it can be difficult sometimes to keep track of the times.
-              Which can be confusing resulting lost of your work and money.
-              So, to come up with a digital solution, I came up with this app Project Management.
-              This app allows you to register various projects that you are working on and allows
-              you to keep daily records of the hours you work per day.
-              The hours can be entered maunally per projects and per day.
+        <Col sm md xs ={12}>
+          <Fade right className='about-text text-center'>
+            <div className='about-text text-center'>
+            <p>
+              We are a startup company based in Amsterdam, Netherlands with great value for the time and hard work.
             </p>
+            <p>
+              We value our customer's time and have created this powerful project management software to track all your working hours and ensure all your hardship is well tracked.
+            </p>
+            <p>  
+              Founded in 2020, this software is built specially for freelancers and independent contractors who have to keep track of their own working-hours, we are here to make that easier for everyone.
+            </p>
+            </div>
           </Fade>
         </Col>
       </Row>
