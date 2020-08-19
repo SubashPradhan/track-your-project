@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/home.css'
 import Navbar from '../Navbar'
 import { Container, Row, Col } from 'react-bootstrap'
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+// import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Background from '../Background'
 import About from '../About'
 
