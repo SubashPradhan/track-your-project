@@ -16,7 +16,7 @@ export default function View(props) {
 
   return (
     <Container fluid className='navbar-container'>
-      <Row className="d-flex justify-content-between">
+      <Row className="justify-content-between">
         <div className='logo-container'>
           <img src={projectLogo} alt='Project Logo' className='project-logo' />
         </div>
