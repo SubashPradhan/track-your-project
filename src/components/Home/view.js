@@ -19,7 +19,7 @@ export default function View(props) {
               We are here with the solution to track all your valuable time.
             </p>
             <p>
-              All we have to decide is what we have to do with the time that is given to us
+              All we have to decide is what we have to do with the time that is given to us.
             </p>
             <p className="font-weight-bold">~ J.R.R Tolkien</p>
           </div>
