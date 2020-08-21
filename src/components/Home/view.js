@@ -10,9 +10,9 @@ export default function View(props) {
   const { menuClicked, scrollDown } = props
   return <>
     <Container fluid className="home-container">
-      <Navbar />
+    <Navbar/>
       <h1 className={menuClicked ? "home-heading home-heading-blur" : "home-heading"}>Manage Your Projects</h1>
-      <Row className={menuClicked ? "home-content-blur home-content" : "home-content"}>
+      <Row className={menuClicked ? "home-content home-content-blur" : "home-content"}>
         <Col lg={6} sm md={12}>
           <div className="introduction text-center">
             <p>
