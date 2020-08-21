@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-import './styles/app.css'
-import Home from '../src/components/Home'
+import Main from '../src/components/Main'
 
 class App extends Component {
   render() {
     return (
-      <div className="main-page">
-        <Route path='/' exact component={Home} />
+      <div>
+        <Route path='/' exact component={Main} />
       </div>
     )
   }
