@@ -3,7 +3,7 @@ import View from './view'
 import { connect } from 'react-redux'
 import { getMenuClickedStat } from '../../actions/menuClicked'
 
-class Navbar extends Component {
+class Navbar extends Component {  
   handleMenu = () => {
     this.props.dispatch(getMenuClickedStat())
   }

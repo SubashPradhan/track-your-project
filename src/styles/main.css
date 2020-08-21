@@ -1,0 +1,9 @@
+@font-face {
+  font-family: Orbitron;
+  src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+}
+
+.main-container{
+  font-family: Orbitron;
+  background: rgba(240, 233, 217, 0.5);
+}
