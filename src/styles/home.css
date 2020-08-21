@@ -32,12 +32,10 @@
 
 .home-content-blur, .home-heading-blur{
   filter: blur(10px);
-  transition: all 0.8s ease-in-out;
 }
 
 .home-content{
   margin-top: 5%;
-  transition: all 1.2s ease-in-out;
 }
 
 .introduction{
