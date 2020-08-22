@@ -2,10 +2,11 @@ import React from 'react'
 import '../../styles/login.css'
 import { TextField, InputAdornment } from '@material-ui/core';
 import { AccountCircle, VisibilityOffRounded } from '@material-ui/icons';
+import { Container} from 'react-bootstrap';
 
 export default function View() {
   return (
-    <div>
+    <Container fluid>
       <div className='login-container'>
         <form autoComplete='off' className='login-form'>
           <TextField
@@ -40,6 +41,6 @@ export default function View() {
           <button className='login-button'>Login</button>
         </form>
       </div>
-    </div>
+    </Container>
   )
 }
