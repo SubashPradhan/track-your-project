@@ -27,7 +27,9 @@ export default function View(props) {
           </div>
         </Col>
       </Row>
-      <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} className='down-arrow' onClick={scrollDown} />
+      <div className="down-arrow">
+        <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} onClick={scrollDown} />
+      </div>
     </Container>
   </>
 }

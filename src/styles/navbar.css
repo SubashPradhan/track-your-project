@@ -1,6 +1,13 @@
 html,body{
-  overflow-x: hidden;
-  position: relative;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+.navbar-container{
+  font-family: Oribitron;
+  position: fixed;
+  z-index: 2;
+  background: linear-gradient(45deg, rgb(135, 167, 146, 0.8), rgba(85, 117, 47, 0.4), rgba(164, 216, 223,0.5))
 }
 
 .nav-links{
@@ -8,21 +15,19 @@ html,body{
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  right: 0px;
-  height: 100%;
-  min-width: 100%;
+  align-items: center;
+  width: 100%;
   background: linear-gradient(45deg, rgba(150, 133, 197, 0.5),  rgba(94, 67, 67, 0.5), rgb(65, 109, 105, 0.5)); 
-  transform: translateX(100%);
-  transition: all 0.7s ease-in;
-  z-index: 1;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
 }
 
 .nav-active{
-  transform: translateX(0%);
+  transform: translateY(0%);
 }  
 
 .project-logo {
+ margin: 0 0 0 30px;
  height: 4rem;
  transition: all 1s ease-in-out;
 }
@@ -39,6 +44,10 @@ html,body{
     transform: rotate(360deg);
   }
 }
+@font-face {
+  font-family: Orbitron;
+  src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+}
 
 .link{
   letter-spacing: 4px;
@@ -48,7 +57,7 @@ html,body{
   font-weight: bolder;
   margin: 30px;
   box-shadow: 5px 5px 5px rgba(107, 9, 53, 0.7);
-  transition: all 0.5s ease-in-out;
+  transition: all linear;
 }
 
 .link:hover{
@@ -56,7 +65,7 @@ html,body{
   color: white;
 }
 
-.link:focus{
+.link:focus, .link:active{
   transform: translate(7%, 7%); 
   box-shadow: 1px 1px 5px rgba(107, 9, 53, 0.8);
   outline: none;
@@ -68,7 +77,8 @@ html,body{
 }
 
 .burger-menu{
-  margin-top: 30px;
+  margin: 30px;
+  /* margin-top: 30px; */
   cursor: pointer;
   z-index: 2;
 }

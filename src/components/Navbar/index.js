@@ -3,17 +3,47 @@ import View from './view'
 import { connect } from 'react-redux'
 import { getMenuClickedStat } from '../../actions/menuClicked'
 
-class Navbar extends Component {  
+class Navbar extends Component {
+  state = { currentScreenHeight: window.innerHeight }
+
   handleMenu = () => {
     this.props.dispatch(getMenuClickedStat())
   }
 
+  setScrollingHeight = (pageId) => {
+    if (pageId === 'home') {
+      this.setState({
+        currentScreenHeight: 0
+      })
+    }
+    else if (pageId === 'about') {
+      this.setState({
+        currentScreenHeight: this.state.currentScreenHeight
+      })
+    }
+    else if (pageId === 'login') {
+      this.setState({
+        currentScreenHeight: 2 * this.state.currentScreenHeight
+      })
+    }
+
+  }
   // Triggers focus for safari and mobile-devices
-  setFocus = (e) => {
+  setFocus = async (e) => {
     const current = e.target
     if (current) {
       current.focus()
     }
+    let currentId = await e.target.id
+
+    await this.setScrollingHeight(currentId)
+    this.props.dispatch(getMenuClickedStat())
+    window.scroll({
+      top: this.state.currentScreenHeight,
+      behavior: "smooth"
+    })
+
+    await this.setState({ currentScreenHeight: window.innerHeight })
   }
 
   render() {

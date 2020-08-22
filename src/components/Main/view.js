@@ -7,10 +7,12 @@ import '../../styles/main.css'
 
 export const View = () => {
   return (
-    <Container fluid className="main-container">
+    <>
       <Navbar />
-      <Home />
-      <About />
-    </Container>
+      <Container fluid className="main-container">
+        <Home />
+        <About />
+      </Container>
+    </>
   )
 }

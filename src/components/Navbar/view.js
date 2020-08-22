@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 import { Container, Row } from 'react-bootstrap'
 
 export default function View(props) {
-  const { handleMenu, menuClicked, setFocus } = props
+  const { handleMenu, menuClicked, setFocus} = props
 
   const Links = <div className={menuClicked ? 'nav-links nav-active' : 'nav-links'}>
-    <Link to='/' className='link' onClick={setFocus}>Home</Link>
-    <Link to='/' className='link' onClick={setFocus}>About</Link>
-    <Link to='/' className='link' onClick={setFocus}>Login</Link>
+    <Link to='#home' id="home" className='link' onClick={setFocus}>Home</Link>
+    <Link to='#about' id="about" className='link' onClick={setFocus}>About</Link>
+    <Link to='#login' id="login" className='link' onClick={setFocus}>Login</Link>
     <Link to='/' className='link' onClick={setFocus}>Sign-up</Link>
   </div>
 
