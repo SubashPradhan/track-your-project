@@ -7,7 +7,21 @@ html,body{
   font-family: Oribitron;
   position: fixed;
   z-index: 2;
-  background: linear-gradient(45deg, rgb(135, 167, 146, 0.8), rgba(85, 117, 47, 0.4), rgba(164, 216, 223,0.5))
+  transition: all 1s ease-in-out;
+}
+
+.navbar-container-background{
+  background: linear-gradient(45deg, rgb(135, 167, 146, 0.8), rgba(85, 117, 47, 0.4), rgba(164, 216, 223,0.5));
+  animation: navbar-animate 1s linear;
+}
+
+@keyframes navbar-animate{
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0%)
+  }
 }
 
 .nav-links{
@@ -26,6 +40,16 @@ html,body{
   transform: translateY(0%);
 }  
 
+.home-heading-collapse{
+  display: none;
+}
+
+.home-heading-nav{
+  font-size: 2.5rem;
+  font-style: italic;
+  text-shadow: 1px 1.4px 3px #ff8533;
+
+}
 .project-logo {
  margin: 0 0 0 30px;
  height: 4rem;
@@ -122,4 +146,11 @@ html,body{
 
 .line-one-clicked, .line-three-clicked{
   background:rgb(214, 2, 2);
+}
+
+@media screen and (max-width : 600px){
+  .home-heading-nav{
+    font-size: 1.3rem;
+    margin-top: 10%;
+  }
 }

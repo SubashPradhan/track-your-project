@@ -4,7 +4,23 @@ import { connect } from 'react-redux'
 import { getMenuClickedStat } from '../../actions/menuClicked'
 
 class Navbar extends Component {
-  state = { currentScreenHeight: window.innerHeight }
+  state = { currentScreenHeight: window.innerHeight, scrollHeight: false }
+
+  componentDidMount() {
+    const getScrollHeight = () => {
+      if (window.pageYOffset > this.state.currentScreenHeight) {
+        this.setState({
+          scrollHeight: true
+        })
+      }
+      else {
+        this.setState({
+          scrollHeight: false
+        })
+      }
+    }
+    window.onscroll = function () { getScrollHeight() }
+  }
 
   handleMenu = () => {
     this.props.dispatch(getMenuClickedStat())
@@ -28,6 +44,7 @@ class Navbar extends Component {
     }
 
   }
+  
   // Triggers focus for safari and mobile-devices
   setFocus = async (e) => {
     const current = e.target
@@ -53,6 +70,7 @@ class Navbar extends Component {
           menuClicked={this.props.menuClicked}
           handleMenu={this.handleMenu}
           setFocus={this.setFocus}
+          scrollHeight={this.state.scrollHeight}
         />
       </div>
     )

@@ -6,7 +6,7 @@
 
 .home-heading{
   position: relative;
-  top: 15%;
+  top: 10%;
   letter-spacing: 4px;
   font-size: 3rem;
   text-shadow: 1px 1.4px 3px #ff8533;
@@ -23,10 +23,6 @@
 
 .home-background:hover{
   animation: blob 10s infinite ease-in-out;
-}
-
-.home-content-blur, .home-heading-blur{
-  filter: blur(10px);
 }
 
 .home-content{
@@ -165,6 +161,7 @@
     font-size: 1.4rem;
     letter-spacing: 2.5px;
   }
+
   .down-arrow{
     display: none;
   }
