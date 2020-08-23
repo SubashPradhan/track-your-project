@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import View from './view'
 
 class Home extends Component {
@@ -8,7 +7,7 @@ class Home extends Component {
   }
 
   scrollDown = () => {
-    const {amountToScroll} = this.state
+    const { amountToScroll } = this.state
     window.scrollTo({
       behavior: "smooth",
       top: amountToScroll
@@ -19,21 +18,10 @@ class Home extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <View
-          menuClicked={this.props.menuClicked}
-          scrollDown={this.scrollDown}
-        />
-      </div>
-    )
+    return <View
+      scrollDown={this.scrollDown}
+    />
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    menuClicked: state.menuClicked
-  }
-}
-
-export default connect(mapStateToProps)(Home)
+export default Home

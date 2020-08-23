@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { Container, Row } from 'react-bootstrap'
 
 export default function View(props) {
-  const { handleMenu, menuClicked, setFocus} = props
+  const { handleMenu, menuClicked, setFocus, scrollHeight} = props
 
   const Links = <div className={menuClicked ? 'nav-links nav-active' : 'nav-links'}>
     <Link to='#home' id="home" className='link' onClick={setFocus}>Home</Link>
@@ -15,7 +15,7 @@ export default function View(props) {
   </div>
 
   return (
-    <Container fluid className='navbar-container'>
+    <Container fluid className={ scrollHeight ? 'navbar-container navbar-container-background' : 'navbar-container'}>
       <Row className="justify-content-between">
         <div className='logo-container'>
           <img src={projectLogo} alt='Project Logo' className='project-logo' />

@@ -5,14 +5,13 @@ import Navbar from '../Navbar'
 import { Container } from 'react-bootstrap'
 import '../../styles/main.css'
 
-export const View = () => {
-  return (
-    <>
+export const View = (props) => {
+  const { menuClicked } = props
+  return<>
       <Navbar />
-      <Container fluid className="main-container">
+      <Container fluid className={menuClicked ? "main-container main-container-blur" : "main-container"}>
         <Home />
         <About />
       </Container>
     </>
-  )
 }
