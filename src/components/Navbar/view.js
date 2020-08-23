@@ -5,17 +5,17 @@ import { Link } from 'react-router-dom'
 import { Container, Row } from 'react-bootstrap'
 
 export default function View(props) {
-  const { handleMenu, menuClicked, setFocus } = props
+  const { handleMenu, menuClicked, setFocus, scrollHeight} = props
 
   const Links = <div className={menuClicked ? 'nav-links nav-active' : 'nav-links'}>
-    <Link to='/' className='link' onClick={setFocus}>Home</Link>
-    <Link to='/' className='link' onClick={setFocus}>About</Link>
-    <Link to='/' className='link' onClick={setFocus}>Login</Link>
+    <Link to='#home' id="home" className='link' onClick={setFocus}>Home</Link>
+    <Link to='#about' id="about" className='link' onClick={setFocus}>About</Link>
+    <Link to='#login' id="login" className='link' onClick={setFocus}>Login</Link>
     <Link to='/' className='link' onClick={setFocus}>Sign-up</Link>
   </div>
 
   return (
-    <Container fluid className='navbar-container'>
+    <Container fluid className={ scrollHeight ? 'navbar-container navbar-container-background' : 'navbar-container'}>
       <Row className="justify-content-between">
         <div className='logo-container'>
           <img src={projectLogo} alt='Project Logo' className='project-logo' />
