@@ -4,6 +4,7 @@ import About from '../About'
 import Navbar from '../Navbar'
 import { Container } from 'react-bootstrap'
 import '../../styles/main.css'
+import OurGoals from '../OurGoals'
 
 export const View = (props) => {
   const { menuClicked } = props
@@ -12,6 +13,7 @@ export const View = (props) => {
       <Container fluid className={menuClicked ? "main-container main-container-blur" : "main-container"}>
         <Home />
         <About />
+        <OurGoals />
       </Container>
     </>
 }

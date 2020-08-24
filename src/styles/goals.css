@@ -1,0 +1,29 @@
+.goals-container{
+  font-style: italic;
+  height: 100vh;
+}
+
+.our-goals{
+  display: flex;
+  justify-content: center;
+}
+
+.goals-heading{
+  text-align: center;
+  text-shadow: 1px 1.4px 3px #ff8533;
+  font-size: 2.5rem;
+}
+
+.goals-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: content-box;
+  box-shadow: 1px 1px 3px #ff8533;;
+  border-radius: 4px;
+  margin: 5% 2% 0 2%;
+}
+
+.goals-content-heading{
+  text-align: center;
+}
