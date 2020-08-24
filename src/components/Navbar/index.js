@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { getMenuClickedStat } from '../../actions/menuClicked'
 
 class Navbar extends Component {
-  state = { currentScreenHeight: window.innerHeight, scrollHeight: false }
+  state = { currentScreenHeight: window.innerHeight, scrollHeight: false, currentPageYOffset: null }
 
   componentDidMount() {
     const getScrollHeight = () => {
@@ -15,7 +15,7 @@ class Navbar extends Component {
       }
       else {
         this.setState({
-          scrollHeight: false
+          scrollHeight: false,
         })
       }
     }
@@ -37,7 +37,7 @@ class Navbar extends Component {
         currentScreenHeight: this.state.currentScreenHeight
       })
     }
-    else if (pageId === 'login') {
+    else if (pageId === 'goals') {
       this.setState({
         currentScreenHeight: 2 * this.state.currentScreenHeight
       })

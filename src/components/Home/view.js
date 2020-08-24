@@ -1,11 +1,10 @@
 import React from 'react'
 import '../../styles/home.css'
 import { Container, Row, Col } from 'react-bootstrap'
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Background from '../Background'
+import DownArrow from '../DownArrow';
 
-export default function View(props) {
-  const { scrollDown } = props
+export default function View() {
   return <Container fluid className="home-container">
 
     <h1 className="home-heading">Manage Your Projects</h1>
@@ -28,9 +27,8 @@ export default function View(props) {
         </div>
       </Col>
     </Row>
-
-    <div className="down-arrow">
-      <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} onClick={scrollDown} />
+    <div className="arrow-home">
+      <DownArrow />
     </div>
   </Container>
 }
