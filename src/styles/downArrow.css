@@ -1,0 +1,34 @@
+.down-arrow{
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.down-arrow:hover{
+  animation: bounce 0.4s infinite alternate, rotate 0.8s linear;
+}
+
+@keyframes bounce{
+  from{
+    transform: translateY(0%);
+    transform: rotateX(45deg);
+  }
+  to{
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .down-arrow{
+    display: none;
+  }
+}

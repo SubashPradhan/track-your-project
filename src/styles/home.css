@@ -72,36 +72,6 @@
   }
 }
 
-.down-arrow{
-  position: relative;
-  font-weight: bold;
-  cursor: pointer;
-  bottom: 30px;
-}
-
-.down-arrow:hover{
-  animation: bounce 0.4s infinite alternate, rotate 0.8s linear;
-}
-
-@keyframes bounce{
-  from{
-    transform: translateY(0%);
-    transform: rotateX(45deg);
-  }
-  to{
-    transform: translateY(-30%);
-  }
-}
-
-@keyframes rotate{
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes blob{
   0%,100%{
     border-radius: 73% 27% 26% 38% / 73% 36% 64% 27% ;
@@ -161,10 +131,11 @@
     font-size: 1.4rem;
     letter-spacing: 2.5px;
   }
+}
 
-  .down-arrow{
-    display: none;
-  }
+.arrow-home{
+  position: relative;
+  bottom: 30px;
 }
 
 @media screen and (max-width: 600px){

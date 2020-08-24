@@ -10,8 +10,10 @@
 
 .goals-heading{
   text-align: center;
+  letter-spacing: 4px;
   text-shadow: 1px 1.4px 3px #ff8533;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  /* margin-top: 10%; */
 }
 
 .goals-content {
@@ -20,10 +22,48 @@
   justify-content: center;
   box-sizing: content-box;
   box-shadow: 1px 1px 3px #ff8533;;
-  border-radius: 4px;
+  border-radius: 10 px;
   margin: 5% 2% 0 2%;
 }
 
 .goals-content-heading{
   text-align: center;
+  letter-spacing: 4px;
+  padding: 5px;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+.goals-content p:nth-child(3)::before{
+  content: open-quote;
+}
+
+.goals-content p:nth-child(3)::after{
+  content: close-quote;
+}
+
+.goals-content p:nth-child(3){
+  margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px blue;
+}
+
+.goals-content p:nth-child(4){
+  letter-spacing: 1.5px;
+  line-height: 1;
+  padding: 15px;
+}
+
+.goals-content img {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1024px){
+  .goals-container{
+    height: auto;
+  }
 }
