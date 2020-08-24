@@ -28,6 +28,15 @@ p:hover{
   transform: scale(1.05)
 }
 
+.down-arrow{
+  text-align: center;
+}
+
+.arrow-about{
+  position: relative;
+  top: 10%;
+}
+
 @media screen and (max-width:1024px){
   .about-container{
     height: auto;
