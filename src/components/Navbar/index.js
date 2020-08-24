@@ -8,7 +8,7 @@ class Navbar extends Component {
 
   componentDidMount() {
     const getScrollHeight = () => {
-      if (window.pageYOffset > this.state.currentScreenHeight) {
+      if (window.pageYOffset > this.state.currentScreenHeight / 3) {
         this.setState({
           scrollHeight: true
         })
