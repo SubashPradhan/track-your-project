@@ -7,13 +7,19 @@ import '../../styles/main.css'
 import OurGoals from '../OurGoals'
 
 export const View = (props) => {
-  const { menuClicked } = props
-  return<>
-      <Navbar />
-      <Container fluid className={menuClicked ? "main-container main-container-blur" : "main-container"}>
+  const { menuClicked, aboutRef, homeRef, goalsRef } = props
+  return <>
+    <Navbar />
+    <Container fluid className={menuClicked ? "main-container main-container-blur" : "main-container"}>
+      <section ref={homeRef}>
         <Home />
+      </section>
+      <section ref={aboutRef}>
         <About />
+      </section>
+      <section ref={goalsRef}>
         <OurGoals />
-      </Container>
-    </>
+      </section>
+    </Container>
+  </>
 }
