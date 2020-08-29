@@ -1,6 +1,10 @@
 export const MENU_CLICKED = 'MENU_CLICKED'
 
-export const getMenuClickedStat = payload => ({
+const getMenuClickedStatPayload = payload => ({
   type: MENU_CLICKED,
   payload
 })
+
+export const getMenuClickedStat = () => dispatch => {
+  return dispatch(getMenuClickedStatPayload())
+}
