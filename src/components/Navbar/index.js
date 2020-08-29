@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import View from './view'
 import { connect } from 'react-redux'
 import { getMenuClickedStat } from '../../actions/menuClicked'
-import { getScrollHeight } from '../../actions/getScrollHeight'
 
 class Navbar extends Component {
   state = {
@@ -36,7 +35,6 @@ class Navbar extends Component {
       current.focus()
     }
     let currentId = await e.target.id
-    
     await this.scrollEffect(currentId)
     this.props.getMenuClickedStat()
     window.scroll({
