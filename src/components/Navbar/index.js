@@ -13,7 +13,6 @@ class Navbar extends Component {
     this.props.getMenuClickedStat()
   }
   
-  // Triggers focus for safari and mobile-devices
   scrollEffect = async (currentId) => {
     if (currentId === 'home'){
       await this.setState({
@@ -30,6 +29,7 @@ class Navbar extends Component {
     }
   }
   
+  // Triggers focus for safari and mobile-devices
   setFocus = async (e) => {
     const current = e.target
     if (current) {
@@ -67,4 +67,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { getMenuClickedStat, getScrollHeight })(Navbar)
+export default connect(mapStateToProps, { getMenuClickedStat })(Navbar)
