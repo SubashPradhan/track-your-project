@@ -7,10 +7,7 @@ class Main extends Component {
   state = {
     aboutRef: React.createRef(), 
     homeRef: React.createRef(),
-    goalsRef: React.createRef(),
-    currentHomeScroll: null,
-    currentAboutScroll: null,
-    currentGoalsScroll: null 
+    goalsRef: React.createRef()
   }
 
   componentDidMount = () => {
