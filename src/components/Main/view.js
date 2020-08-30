@@ -7,10 +7,14 @@ import '../../styles/main.css'
 import OurGoals from '../OurGoals'
 
 export const View = (props) => {
-  const { menuClicked, aboutRef, homeRef, goalsRef } = props
+  const { menuClicked, aboutRef, homeRef, goalsRef, handleClick } = props
   return <>
     <Navbar />
-    <Container fluid className={menuClicked ? "main-container main-container-blur" : "main-container"}>
+    <Container
+      fluid
+      className={menuClicked ? "main-container main-container-blur" : "main-container"}
+      onClick={handleClick}
+    >
       <section ref={homeRef}>
         <Home />
       </section>
