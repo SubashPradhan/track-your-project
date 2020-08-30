@@ -10,12 +10,12 @@ const View = (props) => {
     <Container fluid className="about-container">
       <h2 className="about-heading text-center">About us</h2>
       <Row className="about-content">
-        <Col className="about-img" sm md xs={12}>
+        <Col className="about-img" sm md = {12} lg={6}>
           <Flip left>
             <img src={AboutImg} alt="About" className="img-fluid" />
           </Flip>
         </Col>
-        <Col sm md xs={12}>
+        <Col lg={6}>
           <Fade right className='about-text text-center'>
             <div className='about-text text-center'>
               <p>

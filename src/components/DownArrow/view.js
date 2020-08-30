@@ -5,8 +5,8 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 export const View = (props) => {
   const {scrollDown} = props
   return (
-    <div className="down-arrow arrow-about">
-      <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} onClick={scrollDown} />
+    <div className="down-arrow">
+      <ArrowDownwardIcon style={{ fontSize: '3.5rem' }} onClick={scrollDown} className='arrow' />
     </div>
   )
 }
