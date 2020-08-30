@@ -4,18 +4,16 @@ import { View } from './view'
 export default class DownArrow extends Component {
 
   state = {
-    amountToScroll: 0
+    amountToScroll: window.innerHeight
   }
 
   scrollDown = async () => {
+    console.log(window.pageYOffset)
+    console.log("Inner", window.innerHeight)
     const { amountToScroll } = this.state
     await window.scroll({
       behavior: "smooth",
-      top: amountToScroll + window.innerHeight
-    })
-
-    await this.setState({
-      amountToScroll: window.innerHeight
+      top: amountToScroll + window.pageYOffset
     })
   }
 
