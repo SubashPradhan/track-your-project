@@ -16,7 +16,7 @@ export const View = () => {
           <p>Stop Doubting yourself, work hard and make it happen...</p>
           <p>
             Life is all about working, it doesn't matter what you do,
-            work has become part of the human life since last decades.
+            work has become part of human life since the last decades.
             We want everyone to have easy access to keep 
             track of their work by themselves.
           </p>
@@ -28,8 +28,8 @@ export const View = () => {
           <p>
             Make habit of recording your working hours, at the end of the day
             you can treat yourself for how long and hard you have been working.
-            We understand no job is easy. And you can do that with ease with our 
-            Project management tool.
+            We understand no job is easy. With our Project-management tool 
+            you can easily get used to these healthy habits.
           </p>
         </Col>
         <Col lg={3} className="goals-content">
@@ -37,9 +37,9 @@ export const View = () => {
           <img className="img-fluid" src={Money} alt="Money icon" />
           <p>Time is money says the proverb, but turn it around and you get a precious truth...</p>
           <p>
-            Have you ever lost track of the time or the timer stopped working or the tool is having issue
+            Have you ever lost track of the time or the timer stopped working or the tool is having issues
             and has lost working hours? Losing hours because of weak tools can be painful causing you
-            loss of your money. With our tool you will never have to loose your hours and neither money.
+            loss of your money. With our tool you will never have to lose your hours and neither money.
           </p>
         </Col>
       </Row>
