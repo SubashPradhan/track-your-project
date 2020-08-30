@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {View } from './view'
 import {getScrollHeight} from '../../actions/getScrollHeight'
+import {getMenuClickedStat} from '../../actions/menuClicked'
 
 class Main extends Component {
   state = {
@@ -15,6 +16,13 @@ class Main extends Component {
     this.props.getScrollHeight(refs)
   }
 
+  handleClick = () => {
+    const {menuClicked} = this.props
+    if (menuClicked){
+      this.props.getMenuClickedStat()
+    }
+  }
+
   render() {
     return (
       <div>
@@ -23,6 +31,7 @@ class Main extends Component {
         aboutRef={this.state.aboutRef}
         homeRef={this.state.homeRef}
         goalsRef={this.state.goalsRef}
+        handleClick={this.handleClick}
         />
       </div>
     )
@@ -36,4 +45,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect (mapStateToProps, {getScrollHeight}) (Main)
+export default connect (mapStateToProps, {getScrollHeight, getMenuClickedStat}) (Main)
