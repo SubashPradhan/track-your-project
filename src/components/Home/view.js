@@ -21,7 +21,7 @@ export default function View() {
         </div>
       </Col>
 
-      <Col lg={6} className>
+      <Col lg={6}>
         <div className="home-background">
           <Background className="icons" />
         </div>

@@ -1,11 +1,13 @@
-.down-arrow{
-  position: relative;
-  font-weight: bold;
+.arrow{
   cursor: pointer;
 }
 
-.down-arrow:hover{
-  animation: bounce 0.4s infinite alternate, rotate 0.8s linear;
+.arrow{
+  animation: bounce 0.6s infinite alternate;
+}
+
+.arrow:hover{
+  animation: rotate 0.6s linear;
 }
 
 @keyframes bounce{
@@ -28,6 +30,12 @@
 }
 
 @media screen and (max-width: 1024px){
+  .down-arrow{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px){
   .down-arrow{
     display: none;
   }
