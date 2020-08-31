@@ -1,12 +1,18 @@
 .home-container{
-  height: 100vh;
-  text-align: center;
   font-style: italic;
 }
 
+.home-content{
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .home-heading{
-  position: relative;
-  top: 10%;
+  text-align: center;  
+  margin-top: 5%;
+  width: 100%;
   letter-spacing: 4px;
   font-size: 3rem;
   text-shadow: 1px 1.4px 3px #ff8533;
@@ -23,10 +29,6 @@
 
 .home-background:hover{
   animation: blob 10s infinite ease-in-out;
-}
-
-.home-content{
-  margin-top: 15%;
 }
 
 .introduction{
@@ -61,6 +63,10 @@
 
 .introduction p:nth-child(3){
   animation: bounceIconLeft 2s linear;
+}
+
+.arrow-home{
+  margin-top: 5%;
 }
 
 @keyframes bounceIconLeft{
@@ -131,11 +137,6 @@
     font-size: 1.4rem;
     letter-spacing: 2.5px;
   }
-}
-
-.arrow-home{
-  position: relative;
-  bottom: 30px;
 }
 
 @media screen and (max-width: 600px){
