@@ -6,9 +6,8 @@ import DownArrow from '../DownArrow';
 
 export default function View() {
   return <Container fluid className="home-container">
-
     <Row className="home-content">
-    <h1 className="home-heading">Manage Your Projects</h1>
+      <h1 className="home-heading text-center">Manage Your Projects</h1>
       <Col lg={6} sm md={12}>
         <div className="introduction text-center">
           <p>
@@ -26,9 +25,9 @@ export default function View() {
           <Background className="icons" />
         </div>
       </Col>
-    <div className="arrow-home">
-      <DownArrow />
-    </div>
+      <div className="arrow-home">
+        <DownArrow />
+      </div>
     </Row>
   </Container>
 }
