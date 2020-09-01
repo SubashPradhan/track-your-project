@@ -20,7 +20,8 @@
   justify-content: center;
   box-sizing: content-box;
   box-shadow: 1px 1px 3px #ff8533;;
-  border-radius: 10 px;
+  border-radius: 10px;
+  margin: 20px;
 }
 
 .goals-content-heading{
