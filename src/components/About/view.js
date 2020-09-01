@@ -5,18 +5,18 @@ import '../../styles/about.css'
 import { Flip, Fade } from 'react-reveal';
 import DownArrow from '../DownArrow'
 
-const View = (props) => {
+const View = () => {
   return <>
     <Container fluid className="about-container">
-      <h2 className="about-heading text-center">About us</h2>
       <Row className="about-content">
-        <Col className="about-img" sm md = {12} lg={6}>
+        <h2 className="about-heading text-center">About us</h2>
+        <Col className="about-img" sm md={12} lg={6}>
           <Flip left>
             <img src={AboutImg} alt="About" className="img-fluid" />
           </Flip>
         </Col>
         <Col lg={6}>
-          <Fade right className='about-text text-center'>
+          <Fade right>
             <div className='about-text text-center'>
               <p>
                 We are a startup company based in Amsterdam, Netherlands with great value for the time and hard work.
@@ -30,10 +30,10 @@ const View = (props) => {
             </div>
           </Fade>
         </Col>
+        <div className="arrow-about">
+          <DownArrow />
+        </div>
       </Row>
-      <div className="arrow-about">
-        <DownArrow />
-      </div>
     </Container>
   </>
 }
