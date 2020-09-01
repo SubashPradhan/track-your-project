@@ -8,8 +8,8 @@ import '../../styles/goals.css'
 export const View = () => {
   return (
     <Container fluid className="goals-container">
-      <h2 className="goals-heading">Our Goals</h2>
       <Row className="our-goals">
+        <h2 className="goals-heading text-center">Our Goals</h2>
         <Col lg={3} className="goals-content">
           <h5 className="goals-content-heading">Work Hard</h5>
           <img className="img-fluid" src={Person} alt="Working Person" />
@@ -17,7 +17,7 @@ export const View = () => {
           <p>
             Life is all about working, it doesn't matter what you do,
             work has become part of human life since the last decades.
-            We want everyone to have easy access to keep 
+            We want everyone to have easy access to keep
             track of their work by themselves.
           </p>
         </Col>
@@ -28,7 +28,7 @@ export const View = () => {
           <p>
             Make habit of recording your working hours, at the end of the day
             you can treat yourself for how long and hard you have been working.
-            We understand no job is easy. With our Project-management tool 
+            We understand no job is easy. With our Project-management tool
             you can easily get used to these healthy habits.
           </p>
         </Col>

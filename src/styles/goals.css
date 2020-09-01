@@ -1,19 +1,17 @@
 .goals-container{
   font-style: italic;
-  height: 100vh;
 }
 
 .our-goals{
-  display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .goals-heading{
-  text-align: center;
+  flex-basis: 100%;
   letter-spacing: 4px;
   text-shadow: 1px 1.4px 3px #ff8533;
   font-size: 3rem;
-  margin-top: 5%;
+  margin: 5% 0 2% 0
 }
 
 .goals-content {
@@ -23,7 +21,6 @@
   box-sizing: content-box;
   box-shadow: 1px 1px 3px #ff8533;;
   border-radius: 10 px;
-  margin: 5% 2% 0 2%;
 }
 
 .goals-content-heading{
@@ -65,5 +62,11 @@
 @media screen and (max-width: 1024px){
   .goals-container{
     height: auto;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .goals-heading{
+    margin-top: 30%;
   }
 }

@@ -1,26 +1,29 @@
 .about-container{
   font-style: italic;
-  height: 100vh;
 }
 
 .about-heading{
+  flex-basis: 100%;
   font-size: 3rem;
   font-style: italic;
   letter-spacing: 4px;
   text-shadow: 1px 1.4px 3px #ff8533;
-  margin-top: 5%;
+  margin: 5% 0 5% 0;
 }
 
 .about-content{
-  margin-top: 5%;
-  padding: 30px;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-text{
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  padding: 20px;
+  margin: 0 20px 0 20px;
 }
 
 p:hover{
@@ -33,8 +36,7 @@ p:hover{
 }
 
 .arrow-about{
-  position: relative;
-  top: 10%;
+  margin-top: 5%
 }
 
 @media screen and (max-width:1024px){
@@ -42,11 +44,10 @@ p:hover{
     height: auto;
   }
 
+}
+
+@media screen and (max-width: 600px){
   .about-heading{
-    margin-top: 5%;
-  }
-  
-  .about-text{
-    margin-top: 20%;
+    margin-top: 30%;
   }
 }
