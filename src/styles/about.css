@@ -1,5 +1,5 @@
 .about-container{
-  font-style: italic;
+  font-style: italic; 
 }
 
 .about-heading{
@@ -49,5 +49,9 @@ p:hover{
 @media screen and (max-width: 600px){
   .about-heading{
     margin-top: 30%;
+  }
+
+  .about-text{
+    margin: 0;
   }
 }
