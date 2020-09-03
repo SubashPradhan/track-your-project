@@ -1,0 +1,57 @@
+.contact-container{
+  font-style: italic; 
+}
+
+.contact-heading{
+  flex-basis: 100%;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  text-shadow: 1px 1.4px 3px #ff8533;
+  margin: 5% 0 5% 0;
+}
+
+.form-heading{
+  letter-spacing: 3px;
+  margin: 20px 0 50px 0;
+}
+
+.contact-form{
+  position: relative;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+.contact-input{
+  width: 60%;
+  margin: 10px;
+  border: none;
+  border-bottom: 1px solid darkblue;
+  background: none;
+  outline: none;
+}
+
+.contact-input:focus{
+  border-bottom: 1px solid green;
+}
+
+.contact-text-area, .contact-input::placeholder{
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.contact-text-area{
+  min-width: 90%;
+}
+
+.placeholder-label{
+  position: absolute;
+  top: 10px;
+  text-indent: 1rem;
+  z-index: 1;
+}
+
+.contact-input:focus ~ .placeholder-label{
+  /* position: absolute; */
+  font-size: 0.8rem;
+}
+
