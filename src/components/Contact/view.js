@@ -3,33 +3,62 @@ import { Container, Row, Col } from 'react-bootstrap'
 import ContactImage from '../../assets/images/contact.svg'
 import '../../styles/contact.css'
 
-export const View = () => {
+export const View = (props) => {
+  const {
+    handleInput,
+    isName,
+    isEmail,
+    isSubject,
+    handleFocus,
+    handleFocusOut,
+    value
+  } = props
+
+  const { name, email, subject } = value
   return (
     <Container className="contact-container">
-      <Row>
+      <Row className="contact-content">
         <h2 className="text-center contact-heading">Connect With us.</h2>
         <Col lg={6}>
           <h3 className="form-heading text-center">We'd <span role="img" aria-label="heart">❤️</span> to hear from you.</h3>
-          <form className="contact-form">
+
+          <form className="contact-form" autoComplete="off">
             <div className="field">
-              <label>Full Name:</label>
-              <label className="placeholder-label">Your Full Name</label>
-              <input className="contact-input"/>
+              <input
+                id="name"
+                value={name}
+                onChange={(e) => handleInput(e, 'name')}
+                onFocus={handleFocus}
+                onBlur={handleFocusOut}
+                className="contact-input" />
+              <label className={isName ? "placeholder-label placeholder-label-resize" : "placeholder-label"}>Your Full Name</label>
             </div>
 
             <div className="field">
-              <label>Email:</label>
-              <input className="contact-input" placeholder="Your email." />
+              <input
+                id="email"
+                value={email}
+                onChange={(e) => handleInput(e, 'email')}
+                onFocus={handleFocus}
+                onBlur={handleFocusOut}
+                className="contact-input" />
+              <label className={isEmail ? "placeholder-label placeholder-label-resize" : "placeholder-label"}>Your Email</label>
             </div>
 
             <div className="field">
-              <label>Subject:</label>
-              <input className="contact-input" placeholder="Subject." />
+              <input
+                id="subject"
+                value={subject}
+                onChange={(e) => handleInput(e, 'subject')}
+                onFocus={handleFocus}
+                onBlur={handleFocusOut}
+                className="contact-input" />
+              <label className={isSubject ? "placeholder-label placeholder-label-resize" : "placeholder-label"}>Subject</label>
             </div>
 
-            <div className="field mt-4">
+            <div className="mt-5 text-center">
               <label>Your valuable message matters:</label>
-              <textarea className="contact-text-area" placeholder="Your valuable message." />
+              <textarea className="contact-text-area" placeholder="Your feedbacks." />
             </div>
             <button>Submit</button>
           </form>

@@ -11,8 +11,14 @@
 }
 
 .form-heading{
-  letter-spacing: 3px;
-  margin: 20px 0 50px 0;
+  letter-spacing: 3px;  
+  margin-bottom: 5rem;
+}
+
+.field{
+  position: relative;
+  margin-top: 25px;
+  border-bottom: 1px solid darkblue;
 }
 
 .contact-form{
@@ -22,16 +28,9 @@
 }
 
 .contact-input{
-  width: 60%;
-  margin: 10px;
   border: none;
-  border-bottom: 1px solid darkblue;
   background: none;
   outline: none;
-}
-
-.contact-input:focus{
-  border-bottom: 1px solid green;
 }
 
 .contact-text-area, .contact-input::placeholder{
@@ -44,14 +43,23 @@
 }
 
 .placeholder-label{
-  position: absolute;
-  top: 10px;
-  text-indent: 1rem;
-  z-index: 1;
+  position: absolute;  
+  display: flex;
+  justify-content: flex-start;
+  text-indent: 5px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.8s ease-in-out;
 }
 
-.contact-input:focus ~ .placeholder-label{
-  /* position: absolute; */
+.placeholder-label-resize{
+  top: -12px;
   font-size: 0.8rem;
 }
 
+@media screen and (max-width: 600px){
+  .contact-input{
+    width: 40%
+  }
+}
