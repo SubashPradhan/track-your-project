@@ -8,7 +8,13 @@ import OurGoals from '../OurGoals'
 import Contact from '../Contact'
 
 export const View = (props) => {
-  const { menuClicked, aboutRef, homeRef, goalsRef, handleClick } = props
+  const {
+    menuClicked,
+    aboutRef,
+    homeRef,
+    goalsRef,
+    contactRef,
+    handleClick } = props
   return <>
     <Navbar />
     <Container
@@ -25,7 +31,7 @@ export const View = (props) => {
       <section ref={goalsRef}>
         <OurGoals />
       </section>
-      <section>
+      <section ref={contactRef}>
         <Contact />
       </section>
     </Container>

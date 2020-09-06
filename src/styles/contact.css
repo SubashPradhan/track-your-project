@@ -10,20 +10,16 @@
   margin: 5% 0 5% 0;
 }
 
-.form-heading{
-  letter-spacing: 3px;  
-  margin-bottom: 5rem;
-}
-
-.field{
-  position: relative;
-  margin-top: 25px;
+.contact-content{
+  text-align: center;
+  align-items: center;
 }
 
 .contact-form{
-  position: relative;
   font-size: 1.3rem;
   letter-spacing: 3px;
+  min-width: 80%;
+  padding: 40px;  
 }
 
 .contact-input{
@@ -40,14 +36,22 @@
 }
 
 .contact-text-area{
-  min-width: 90%;
+  min-width: 80%;
+}
+
+.form-heading{
+  letter-spacing: 3px;  
+}
+
+.field{
+  position: relative;
+  margin-top: 25px;
 }
 
 .placeholder-label{
   position: absolute;  
   display: flex;
-  justify-content: flex-start;
-  text-indent: 5px;
+  text-indent: 0.3rem;
   left: 0;
   top: 0;
   z-index: -1;
@@ -59,8 +63,49 @@
   font-size: 0.8rem;
 }
 
+.social-heading{
+  letter-spacing: 3px;  
+  flex-basis: 100%;
+
+}
+.social{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon{
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.icon-tag{
+  transform: translateY(120%);
+  transition: 0.8s ease-in-out;
+  min-width: 80px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+#fb-icon:hover, #twitter-icon:hover{
+  color: blue;
+}
+
+#insta-icon:hover{
+  color: red;
+}
+
+.social-icon:hover  p{
+  transform: translateX(0%);
+}
+
 @media screen and (max-width: 600px){
-  .contact-input{
-    width: 40%
+  .contact-form{
+    padding: 10px;
+  }
+
+  .social-heading{
+    margin-top: 10%;
   }
 }
