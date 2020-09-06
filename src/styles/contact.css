@@ -63,8 +63,49 @@
   font-size: 0.8rem;
 }
 
+.social-heading{
+  letter-spacing: 3px;  
+  flex-basis: 100%;
+
+}
+.social{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon{
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.icon-tag{
+  transform: translateY(120%);
+  transition: 0.8s ease-in-out;
+  min-width: 80px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+#fb-icon:hover, #twitter-icon:hover{
+  color: blue;
+}
+
+#insta-icon:hover{
+  color: red;
+}
+
+.social-icon:hover  p{
+  transform: translateX(0%);
+}
+
 @media screen and (max-width: 600px){
   .contact-form{
     padding: 10px;
+  }
+
+  .social-heading{
+    margin-top: 10%;
   }
 }

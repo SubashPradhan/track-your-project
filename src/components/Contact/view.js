@@ -1,8 +1,11 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import ContactImage from '../../assets/images/contact.svg'
-import '../../styles/contact.css'
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TwitterIcon from '@material-ui/icons/Twitter';
 import { Fade } from 'react-reveal'
+import '../../styles/contact.css'
 
 export const View = (props) => {
   const {
@@ -19,7 +22,7 @@ export const View = (props) => {
   return (
     <Container className="contact-container" fluid>
       <Row className="contact-content">
-        <h2 className="text-center contact-heading">Connect With us.</h2>
+        <h2 className="text-center contact-heading">Connect With us</h2>
         <Col lg={6}>
           <h3 className="form-heading text-center">We'd <span role="img" aria-label="heart">❤️</span> to hear from you.</h3>
 
@@ -68,6 +71,21 @@ export const View = (props) => {
         </Col>
 
         <Col lg={6}>
+        <h3 className="social-heading">Join us @</h3>
+          <div className="social">
+            <div className="social-icon">
+              <FacebookIcon fontSize='large' id="fb-icon" />
+              <p className="icon-tag">facebook</p>
+            </div>
+            <div className="social-icon">
+              <InstagramIcon fontSize='large' id="insta-icon" />
+              <p className="icon-tag">Instagram</p>
+            </div>
+            <div className="social-icon">
+              <TwitterIcon fontSize='large' id="twitter-icon" />
+              <p className="icon-tag">Twitter</p>
+            </div>
+          </div>
           <Fade right>
             <img src={ContactImage} alt="Contact pic" className="img-fluid" />
           </Fade>
