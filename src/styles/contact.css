@@ -28,6 +28,7 @@
   background: none;
   outline: none;
   border-bottom: 1px solid darkblue;
+  font-style: italic;
 }
 
 .contact-text-area, .contact-input::placeholder{
