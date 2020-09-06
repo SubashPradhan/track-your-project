@@ -1,7 +1,6 @@
 import React from 'react'
 import '../../styles/background.css'
 
-
 export const View = () => {
   return (
     <div>

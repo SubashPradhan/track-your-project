@@ -10,20 +10,16 @@
   margin: 5% 0 5% 0;
 }
 
-.form-heading{
-  letter-spacing: 3px;  
-  margin-bottom: 5rem;
-}
-
-.field{
-  position: relative;
-  margin-top: 25px;
+.contact-content{
+  text-align: center;
+  align-items: center;
 }
 
 .contact-form{
-  position: relative;
   font-size: 1.3rem;
   letter-spacing: 3px;
+  min-width: 80%;
+  padding: 40px;  
 }
 
 .contact-input{
@@ -40,14 +36,22 @@
 }
 
 .contact-text-area{
-  min-width: 90%;
+  min-width: 80%;
+}
+
+.form-heading{
+  letter-spacing: 3px;  
+}
+
+.field{
+  position: relative;
+  margin-top: 25px;
 }
 
 .placeholder-label{
   position: absolute;  
   display: flex;
-  justify-content: flex-start;
-  text-indent: 5px;
+  text-indent: 0.3rem;
   left: 0;
   top: 0;
   z-index: -1;
@@ -60,7 +64,7 @@
 }
 
 @media screen and (max-width: 600px){
-  .contact-input{
-    width: 40%
+  .contact-form{
+    padding: 10px;
   }
 }

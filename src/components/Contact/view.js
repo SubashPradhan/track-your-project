@@ -16,7 +16,7 @@ export const View = (props) => {
 
   const { name, email, subject } = value
   return (
-    <Container className="contact-container">
+    <Container className="contact-container" fluid>
       <Row className="contact-content">
         <h2 className="text-center contact-heading">Connect With us.</h2>
         <Col lg={6}>
@@ -56,13 +56,14 @@ export const View = (props) => {
               <label className={isSubject ? "placeholder-label placeholder-label-resize" : "placeholder-label"}>Subject</label>
             </div>
 
-            <div className="mt-5 text-center">
+            <div className="mt-5">
               <label>Your valuable message matters:</label>
               <textarea className="contact-text-area" placeholder="Your feedbacks." />
             </div>
             <button>Submit</button>
           </form>
         </Col>
+
         <Col lg={6}>
           <img src={ContactImage} alt="Contact pic" className="img-fluid" />
         </Col>

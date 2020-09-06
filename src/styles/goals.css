@@ -15,13 +15,13 @@
 }
 
 .goals-content {
-  display: flex;
+  display: flex;  
   flex-direction: column;
-  justify-content: center;
   box-sizing: content-box;
   box-shadow: 1px 1px 3px #ff8533;;
   border-radius: 10px;
-  margin: 20px;
+  height: 90%;
+  padding: 20px;
 }
 
 .goals-content-heading{
@@ -69,5 +69,10 @@
 @media screen and (max-width: 600px){
   .goals-heading{
     margin-top: 30%;
+  }
+
+  .goals-content{
+    margin-top: 20px;
+    height: auto;
   }
 }
