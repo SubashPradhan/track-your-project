@@ -43,6 +43,10 @@ class Navbar extends Component {
       await this.setState({
         currentScrollHeight: this.props.scrollHeight.goalsScrollHeight
       })
+    } else if (currentId === 'contact') {
+      this.setState({
+        currentScrollHeight: this.props.scrollHeight.contactScrollHeight
+      })
     }
   }
 
@@ -55,8 +59,8 @@ class Navbar extends Component {
     let currentId = await e.target.id
     await this.scrollEffect(currentId)
     this.props.getMenuClickedStat()
-    
-    window.scroll({
+
+    window.scrollTo({
       top: this.state.currentScrollHeight,
       behavior: "smooth"
     })

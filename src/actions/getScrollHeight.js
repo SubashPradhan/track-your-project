@@ -6,11 +6,12 @@ const getScrollHeightPayload = payload => ({
 })
 
 export const getScrollHeight = (refs) => dispatch => {
-  const ref = refs.map(singleRef => singleRef.current.getBoundingClientRect().top)
+  const ref = refs.map(singleRef => singleRef.current.getBoundingClientRect().bottom)
   const scrollHeight = {
     homeScrollHeight: ref[0],
     aboutScrollHeight: ref[1],
-    goalsScrollHeight: ref[2]
+    goalsScrollHeight: ref[2],
+    contactScrollHeight: ref[3]
   }
   const action = getScrollHeightPayload(scrollHeight)
   return dispatch(action)

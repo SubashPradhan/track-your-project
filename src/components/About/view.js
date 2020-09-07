@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import AboutImg from '../../assets/images/research.svg'
 import '../../styles/about.css'
 import { Flip, Fade } from 'react-reveal';
-import DownArrow from '../DownArrow'
 
 const View = () => {
   return <>
@@ -30,9 +29,6 @@ const View = () => {
             </div>
           </Fade>
         </Col>
-        <div className="arrow-about">
-          <DownArrow />
-        </div>
       </Row>
     </Container>
   </>

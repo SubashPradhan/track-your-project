@@ -1,0 +1,116 @@
+.contact-container{
+  font-style: italic; 
+}
+
+.contact-heading{
+  flex-basis: 100%;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  text-shadow: 1px 1.4px 3px #ff8533;
+  margin: 5% 0 5% 0;
+}
+
+.contact-content{
+  text-align: center;
+  align-items: center;
+}
+
+.contact-form{
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  min-width: 80%;
+  padding: 40px;  
+}
+
+.contact-input{
+  min-width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid darkblue;
+  font-style: italic;
+}
+
+.contact-text-area, .contact-input::placeholder{
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.contact-text-area{
+  min-width: 80%;
+}
+
+.form-heading{
+  letter-spacing: 3px;  
+}
+
+.field{
+  position: relative;
+  margin-top: 25px;
+}
+
+.placeholder-label{
+  position: absolute;  
+  display: flex;
+  text-indent: 0.3rem;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.8s ease-in-out;
+}
+
+.placeholder-label-resize{
+  top: -12px;
+  font-size: 0.8rem;
+}
+
+.error{
+  color: red;
+}
+
+.social-heading{
+  letter-spacing: 3px;  
+  flex-basis: 100%;
+
+}
+.social{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon{
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.icon-tag{
+  transform: translateY(120%);
+  transition: 0.8s ease-in-out;
+  min-width: 80px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+#fb-icon:hover, #twitter-icon:hover{
+  color: blue;
+}
+
+#insta-icon:hover{
+  color: red;
+}
+
+.social-icon:hover  p{
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 600px){
+  .contact-form{
+    padding: 10px;
+  }
+
+  .social-heading{
+    margin-top: 10%;
+  }
+}
