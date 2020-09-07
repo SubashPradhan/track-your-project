@@ -4,7 +4,7 @@ import ContactImage from '../../assets/images/contact.svg'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { Fade } from 'react-reveal'
+import { Fade, Roll } from 'react-reveal'
 import '../../styles/contact.css'
 
 export const View = (props) => {
@@ -15,8 +15,10 @@ export const View = (props) => {
     isSubject,
     handleFocus,
     handleFocusOut,
+    handleSubmit,
     value,
-    handleSubmit
+    error,
+    successMsg
   } = props
 
   const { name, email, subject, message } = value
@@ -25,8 +27,10 @@ export const View = (props) => {
       <Row className="contact-content">
         <h2 className="text-center contact-heading">Connect With us</h2>
         <Col lg={6}>
-          <h3 className="form-heading text-center">We'd <span role="img" aria-label="heart">❤️</span> to hear from you.</h3>
-
+          {
+            successMsg ? <Roll bottom><h3 className="form-heading">{successMsg}</h3></Roll> :
+              <h3 className="form-heading text-center">We'd <span role="img" aria-label="heart">❤️</span> to hear from you.</h3>
+          }
           <Fade left>
             <form className="contact-form" autoComplete="off">
               <div className="field">
@@ -61,14 +65,19 @@ export const View = (props) => {
                   className="contact-input" />
                 <label className={isSubject ? "placeholder-label placeholder-label-resize" : "placeholder-label"}>Subject</label>
               </div>
+              {error ? <Fade bottom>
+                <div className='error'>
+                  {error}
+                </div>
+              </Fade> : null}
 
               <div className="mt-5">
                 <label>Your valuable message matters:</label>
-                <textarea 
-                value={message}
-                onChange={(e) => handleInput(e, 'message')}
-                className="contact-text-area" 
-                placeholder="Your feedbacks." />
+                <textarea
+                  value={message}
+                  onChange={(e) => handleInput(e, 'message')}
+                  className="contact-text-area"
+                  placeholder="Your feedbacks." />
               </div>
               <button onClick={handleSubmit}>Submit</button>
             </form>
@@ -76,7 +85,7 @@ export const View = (props) => {
         </Col>
 
         <Col lg={6}>
-        <h3 className="social-heading">Join us @</h3>
+          <h3 className="social-heading">Join us @</h3>
           <div className="social">
             <div className="social-icon">
               <FacebookIcon fontSize='large' id="fb-icon" />

@@ -60,7 +60,7 @@ class Navbar extends Component {
     await this.scrollEffect(currentId)
     this.props.getMenuClickedStat()
 
-    window.scroll({
+    window.scrollTo({
       top: this.state.currentScrollHeight,
       behavior: "smooth"
     })
