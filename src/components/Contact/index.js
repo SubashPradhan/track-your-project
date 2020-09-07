@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { View } from './view'
+import emailjs from 'emailjs-com';
+
 
 export default class Contact extends Component {
   state = {
@@ -10,7 +12,8 @@ export default class Contact extends Component {
     hasValue: null,
     name: '',
     email: '',
-    subject: ''
+    subject: '',
+    message: ''
   }
 
   handleInput = (e, field) => {
@@ -58,6 +61,26 @@ export default class Contact extends Component {
     }
   }
 
+  handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const response = await emailjs.send('contact_service', 'template_jh4031l', this.state, 'user_yunGgCParLmCgDqeYQTwO')
+      if (response){
+        console.log('SUCCESS!', response.status)
+        console.log(response.status)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+    
+    this.setState({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    })
+  }
+
   render() {
     return <View
       handleInput={this.handleInput}
@@ -66,6 +89,7 @@ export default class Contact extends Component {
       isName={this.state.isName}
       isEmail={this.state.isEmail}
       isSubject={this.state.isSubject}
+      handleSubmit={this.handleSubmit}
       value={this.state}
     />
   }
