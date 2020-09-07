@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { View } from './view'
 import emailjs from 'emailjs-com';
 
-
 export default class Contact extends Component {
   state = {
     isName: null,
@@ -91,7 +90,7 @@ export default class Contact extends Component {
     e.preventDefault()
     try {
       if (this.handleError()) {
-        // const response = await emailjs.send('contact_service', 'template_jh4031l', this.state, 'user_yunGgCParLmCgDqeYQTwO')
+        await emailjs.send('contact_service', 'template_jh4031l', this.state, 'user_yunGgCParLmCgDqeYQTwO')
         this.setState({
           name: '',
           email: '',
