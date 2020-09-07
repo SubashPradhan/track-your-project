@@ -15,10 +15,11 @@ export const View = (props) => {
     isSubject,
     handleFocus,
     handleFocusOut,
-    value
+    value,
+    handleSubmit
   } = props
 
-  const { name, email, subject } = value
+  const { name, email, subject, message } = value
   return (
     <Container className="contact-container" fluid>
       <Row className="contact-content">
@@ -63,9 +64,13 @@ export const View = (props) => {
 
               <div className="mt-5">
                 <label>Your valuable message matters:</label>
-                <textarea className="contact-text-area" placeholder="Your feedbacks." />
+                <textarea 
+                value={message}
+                onChange={(e) => handleInput(e, 'message')}
+                className="contact-text-area" 
+                placeholder="Your feedbacks." />
               </div>
-              <button>Submit</button>
+              <button onClick={handleSubmit}>Submit</button>
             </form>
           </Fade>
         </Col>
