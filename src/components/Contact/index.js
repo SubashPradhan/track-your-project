@@ -13,7 +13,9 @@ export default class Contact extends Component {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    error: null,
+    successMsg: null
   }
 
   handleInput = (e, field) => {
@@ -22,6 +24,30 @@ export default class Contact extends Component {
     this.setState({
       [field]: value
     })
+    this.handleError()
+  }
+
+  handleError = () => {
+    if (!this.state.name || !this.state.email || !this.state.subject) {
+      this.setState({
+        error: "All fields are required."
+      })
+      return false
+    } else {
+      this.setState({ error: '' })
+    }
+
+
+    if (this.state.email) {
+      const pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+      if (!pattern.test(this.state.email)) {
+        this.setState({
+          error: "Please enter a valid email."
+        })
+        return false
+      }
+    }
+    return true
   }
 
   handleFocus = async (e) => {
@@ -64,21 +90,20 @@ export default class Contact extends Component {
   handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await emailjs.send('contact_service', 'template_jh4031l', this.state, 'user_yunGgCParLmCgDqeYQTwO')
-      if (response){
-        console.log('SUCCESS!', response.status)
-        console.log(response.status)
+      if (this.handleError()) {
+        // const response = await emailjs.send('contact_service', 'template_jh4031l', this.state, 'user_yunGgCParLmCgDqeYQTwO')
+        this.setState({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+          successMsg: "Thank you for your feedback, we will get back to you very soon."
+        })
       }
     } catch (error) {
       console.log(error)
     }
-    
-    this.setState({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    })
+
   }
 
   render() {
@@ -91,6 +116,8 @@ export default class Contact extends Component {
       isSubject={this.state.isSubject}
       handleSubmit={this.handleSubmit}
       value={this.state}
+      error={this.state.error}
+      successMsg={this.state.successMsg}
     />
   }
 }

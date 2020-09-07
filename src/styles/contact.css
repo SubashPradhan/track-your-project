@@ -64,6 +64,10 @@
   font-size: 0.8rem;
 }
 
+.error{
+  color: red;
+}
+
 .social-heading{
   letter-spacing: 3px;  
   flex-basis: 100%;
