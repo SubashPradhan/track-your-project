@@ -79,7 +79,8 @@ export const View = (props) => {
                   className="contact-text-area"
                   placeholder="Your feedbacks." />
               </div>
-              <button onClick={handleSubmit}>Submit</button>
+
+              <button onClick={handleSubmit} className="submit-button">Submit</button>
             </form>
           </Fade>
         </Col>
