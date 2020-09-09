@@ -5,7 +5,6 @@ import { getMenuClickedStat } from '../../actions/menuClicked'
 
 class Navbar extends Component {
   state = {
-    currentScrollHeight: null,
     scrollNav: false
   }
 
@@ -29,41 +28,13 @@ class Navbar extends Component {
     this.props.getMenuClickedStat()
   }
 
-
-  scrollEffect = async (currentId) => {
-    if (currentId === 'home') {
-      await this.setState({
-        currentScrollHeight: this.props.scrollHeight.homeScrollHeight
-      })
-    } else if (currentId === 'about') {
-      await this.setState({
-        currentScrollHeight: this.props.scrollHeight.aboutScrollHeight
-      })
-    } else if (currentId === 'goals') {
-      await this.setState({
-        currentScrollHeight: this.props.scrollHeight.goalsScrollHeight
-      })
-    } else if (currentId === 'contact') {
-      this.setState({
-        currentScrollHeight: this.props.scrollHeight.contactScrollHeight
-      })
-    }
-  }
-
   // Triggers focus for safari and mobile-devices
   setFocus = async (e) => {
     const current = e.target
     if (current) {
       current.focus()
     }
-    let currentId = await e.target.id
-    await this.scrollEffect(currentId)
     this.props.getMenuClickedStat()
-
-    window.scrollTo({
-      top: this.state.currentScrollHeight,
-      behavior: "smooth"
-    })
   }
 
   render() {
@@ -82,8 +53,7 @@ class Navbar extends Component {
 
 const mapStateToProps = state => {
   return {
-    menuClicked: state.menuClicked,
-    scrollHeight: state.scrollHeight
+    menuClicked: state.menuClicked
   }
 }
 
