@@ -1,5 +1,6 @@
 html{
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 @font-face {

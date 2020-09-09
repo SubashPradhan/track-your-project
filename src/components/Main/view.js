@@ -10,10 +10,6 @@ import Contact from '../Contact'
 export const View = (props) => {
   const {
     menuClicked,
-    aboutRef,
-    homeRef,
-    goalsRef,
-    contactRef,
     handleClick } = props
   return <>
     <Navbar />
@@ -22,16 +18,16 @@ export const View = (props) => {
       className={menuClicked ? "main-container main-container-blur" : "main-container"}
       onClick={handleClick}
     >
-      <section ref={homeRef}>
+      <section id="home">
         <Home />
       </section>
-      <section ref={aboutRef}>
+      <section id="about">
         <About />
       </section>
-      <section ref={goalsRef}>
+      <section id="goals">
         <OurGoals />
       </section>
-      <section ref={contactRef}>
+      <section id="contact">
         <Contact />
       </section>
     </Container>
