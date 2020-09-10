@@ -47,22 +47,10 @@
 }
 .project-logo {
  margin: 0 0 0 30px;
- height: 4rem;
+ /* height: 4rem; */
  transition: all 1s ease-in-out;
 }
 
-.project-logo:hover{
-  animation: rotate-logo 0.7s linear;
-}
-
-@keyframes rotate-logo{
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
-}
 @font-face {
   font-family: Orbitron;
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
