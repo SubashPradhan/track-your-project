@@ -4,7 +4,7 @@ import projectLogo from '../../assets/images/project-logo.svg'
 import { Container, Row } from 'react-bootstrap'
 
 export default function View(props) {
-  const { handleMenu, menuClicked, setFocus, scrollNav} = props
+  const { handleMenu, menuClicked, setFocus, scrollNav } = props
 
   const Links = <div className={menuClicked ? 'nav-links nav-active' : 'nav-links'}>
     <a href="#home" className='link' onClick={setFocus}>Home</a>
@@ -14,10 +14,10 @@ export default function View(props) {
   </div>
 
   return (
-    <Container fluid className={ scrollNav ? 'navbar-container navbar-container-background' : 'navbar-container'}>
+    <Container fluid className={scrollNav ? 'navbar-container navbar-container-background' : 'navbar-container'}>
       <Row className="justify-content-between">
         <div className='logo-container'>
-          <img src={projectLogo} alt='Project Logo' className='project-logo' />
+          <img src={projectLogo} alt='Project Logo' className={scrollNav ? 'project-logo project-logo-resize' : 'project-logo'} />
         </div>
         {Links}
         <div className='burger-menu' onClick={handleMenu}>
