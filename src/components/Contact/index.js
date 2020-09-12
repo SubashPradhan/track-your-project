@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { View } from './view'
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
+import { showModalStat } from '../../actions/showModal'
 
-export default class Contact extends Component {
+class Contact extends Component {
   state = {
     isName: null,
     isEmail: null,
@@ -14,7 +16,7 @@ export default class Contact extends Component {
     subject: '',
     message: '',
     error: null,
-    successMsg: null
+    successMsg: null,
   }
 
   handleInput = (e, field) => {
@@ -90,19 +92,20 @@ export default class Contact extends Component {
     e.preventDefault()
     try {
       if (this.handleError()) {
-        await emailjs.send('contact_service', 'template_jh4031l', this.state, 'user_yunGgCParLmCgDqeYQTwO')
+        // await emailjs.send('contact_service', 'template_jh4031l', this.state, 'user_yunGgCParLmCgDqeYQTwO')
         this.setState({
           name: '',
           email: '',
           subject: '',
           message: '',
-          successMsg: "Thank you for your feedback, we will get back to you very soon."
+          successMsg: "Thank you for your feedback, we will get back to you very soon.",
+          showModal: true
         })
+        this.props.showModalStat()
       }
     } catch (error) {
       console.log(error)
     }
-
   }
 
   render() {
@@ -117,6 +120,15 @@ export default class Contact extends Component {
       value={this.state}
       error={this.state.error}
       successMsg={this.state.successMsg}
+      showModal={this.props.showModal}
     />
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    showModal: state.showModal
+  }
+}
+
+export default connect(mapStateToProps, { showModalStat })(Contact)

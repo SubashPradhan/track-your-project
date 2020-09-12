@@ -6,6 +6,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import { Fade, Roll } from 'react-reveal'
 import '../../styles/contact.css'
+import Thankyou from '../ThankyouModal'
 
 export const View = (props) => {
   const {
@@ -18,10 +19,12 @@ export const View = (props) => {
     handleSubmit,
     value,
     error,
-    successMsg
+    successMsg,
+    showModal
   } = props
 
   const { name, email, subject, message } = value
+  
   return (
     <Container className="contact-container" fluid>
       <Row className="contact-content">
@@ -105,6 +108,14 @@ export const View = (props) => {
             <img src={ContactImage} alt="Contact pic" className="img-fluid" />
           </Fade>
         </Col>
+        {
+          showModal ?
+            <Fade>
+              <Row className="thankyou-modal">
+                <Thankyou />
+              </Row>
+            </Fade> : null
+        }
       </Row>
     </Container >
   )
