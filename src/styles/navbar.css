@@ -45,24 +45,18 @@
   text-shadow: 1px 1.4px 3px #ff8533;
 
 }
+
 .project-logo {
  margin: 0 0 0 30px;
- height: 4rem;
+ height: 8rem;
  transition: all 1s ease-in-out;
 }
 
-.project-logo:hover{
-  animation: rotate-logo 0.7s linear;
+.project-logo-resize{
+  height: 5rem;
+  margin-top: -15px;
 }
 
-@keyframes rotate-logo{
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
-}
 @font-face {
   font-family: Orbitron;
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
@@ -97,7 +91,6 @@
 
 .burger-menu{
   margin: 30px;
-  /* margin-top: 30px; */
   cursor: pointer;
   z-index: 2;
 }
@@ -147,5 +140,9 @@
   .home-heading-nav{
     font-size: 1.3rem;
     margin-top: 10%;
+  }
+
+  .project-logo{
+    height: 5rem;
   }
 }
