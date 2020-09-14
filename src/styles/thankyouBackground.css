@@ -1,0 +1,51 @@
+#heart-1{
+  background-color: black;
+  animation: fade-in 1.7s ease-in-out;
+}
+
+#heart-2{
+  animation: fade-in 1.8s linear;
+}
+#heart-3{
+  animation: fade-in 1.6s linear;
+}
+#heart-4{
+  animation: fade-in 1.5s linear;
+}
+#heart-5{
+  animation: fade-in 1.4s linear;
+}
+#heart-6{
+  animation: fade-in 1.3s linear;
+}
+#heart-7{
+  animation: fade-in 1.2s linear;
+}
+#heart-8{
+  animation: fade-in 1s linear;
+}
+
+@keyframes fade-in{
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
+#dot-1, #dot-2, #dot-3, #dot-4{
+  animation: shine 1.7s ease-in-out;
+}
+
+@keyframes shine{
+  from{
+    stroke: none;
+    stroke-width: 0;
+  }
+  to{
+    stroke: red;
+    stroke-width: 1000;
+    fill: rgb(219, 19, 19);
+  }
+}
