@@ -1,5 +1,6 @@
 .contact-container{
   font-style: italic; 
+  position: relative;
 }
 
 .contact-heading{
@@ -151,6 +152,14 @@
 
 .social-icon:hover  p{
   transform: translateX(0%);
+}
+
+.thankyou-modal{
+  position: fixed;
+  z-index: 2;
+  top: 5%;
+  width: 100%;
+  left: 0;
 }
 
 @media screen and (max-width: 600px){
