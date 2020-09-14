@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { View } from './view'
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import { showModalStat } from '../../actions/showModal'
 
 class Contact extends Component {
@@ -16,7 +16,6 @@ class Contact extends Component {
     subject: '',
     message: '',
     error: null,
-    successMsg: null,
   }
 
   handleInput = (e, field) => {
@@ -90,22 +89,21 @@ class Contact extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault()
-    try {
-      if (this.handleError()) {
-        // await emailjs.send('contact_service', 'template_jh4031l', this.state, 'user_yunGgCParLmCgDqeYQTwO')
-        this.setState({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-          successMsg: "Thank you for your feedback, we will get back to you very soon.",
-          showModal: true
-        })
-        this.props.showModalStat()
-      }
-    } catch (error) {
-      console.log(error)
-    }
+    await this.props.showModalStat()
+  //   try {
+  //     if (this.handleError()) {
+  //       await emailjs.send('contact_service', 'template_jh4031l', this.state, 'user_yunGgCParLmCgDqeYQTwO')
+  //       this.setState({
+  //         name: '',
+  //         email: '',
+  //         subject: '',
+  //         message: '',
+  //         showModal: true
+  //       })
+  //     }
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
   }
 
   render() {
@@ -119,7 +117,6 @@ class Contact extends Component {
       handleSubmit={this.handleSubmit}
       value={this.state}
       error={this.state.error}
-      successMsg={this.state.successMsg}
       showModal={this.props.showModal}
     />
   }

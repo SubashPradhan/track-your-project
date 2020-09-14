@@ -1,5 +1,32 @@
-.modal-container{
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0,255, 0.7);
+.modal-content{
+  padding: 30px;
+}
+
+.modal-heading{
+  margin-top: 10px;
+}
+
+.close-button{
+  border: none;
+  background: none;
+  position: absolute;
+  z-index: 1;
+  margin: 15px;
+  font-size: 2rem;
+  right: 10px;
+  top: 0;
+}
+
+.close-button:hover{
+  outline: none;
+}
+
+.thankyou-text{
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 600px){
+  .close-button{
+    margin: 5px;
+  }
 }

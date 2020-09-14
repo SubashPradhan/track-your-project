@@ -156,8 +156,9 @@
 
 .thankyou-modal{
   position: fixed;
-  height: 100%;
-  top: 0;
+  z-index: 2;
+  top: 5%;
+  width: 100%;
   left: 0;
 }
 

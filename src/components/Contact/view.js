@@ -4,7 +4,7 @@ import ContactImage from '../../assets/images/contact.svg'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { Fade, Roll } from 'react-reveal'
+import { Fade } from 'react-reveal'
 import '../../styles/contact.css'
 import Thankyou from '../ThankyouModal'
 
@@ -19,21 +19,17 @@ export const View = (props) => {
     handleSubmit,
     value,
     error,
-    successMsg,
     showModal
   } = props
 
   const { name, email, subject, message } = value
-  
+
   return (
     <Container className="contact-container" fluid>
       <Row className="contact-content">
         <h2 className="text-center contact-heading">Connect With us</h2>
         <Col lg={6}>
-          {
-            successMsg ? <Roll bottom><h3 className="form-heading">{successMsg}</h3></Roll> :
-              <h3 className="form-heading text-center">We'd <span role="img" aria-label="heart">❤️</span> to hear from you.</h3>
-          }
+          <h3 className="form-heading text-center">We'd <span role="img" aria-label="heart">❤️</span> to hear from you.</h3>
           <Fade left>
             <form className="contact-form" autoComplete="off">
               <div className="field">
@@ -108,15 +104,16 @@ export const View = (props) => {
             <img src={ContactImage} alt="Contact pic" className="img-fluid" />
           </Fade>
         </Col>
-        {
-          showModal ?
-            <Fade>
-              <Row className="thankyou-modal">
-                <Thankyou />
-              </Row>
-            </Fade> : null
-        }
       </Row>
+      {
+        showModal ?
+          <div className="thankyou-modal" fluid>
+            <Fade >
+              <Thankyou/>
+            </Fade>
+          </div>
+          : null
+      }
     </Container >
   )
 }
