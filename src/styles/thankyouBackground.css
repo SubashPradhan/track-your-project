@@ -1,5 +1,4 @@
 #heart-1{
-  background-color: black;
   animation: fade-in 1.7s ease-in-out;
 }
 
@@ -25,27 +24,12 @@
   animation: fade-in 1s linear;
 }
 
+
 @keyframes fade-in{
   from{
-    transform: translateY(-100%);
+    transform: translateY(100%) rotate(90deg) scale(0.2);
   }
   to{
-    transform: translateY(0%);
-  }
-}
-
-#dot-1, #dot-2, #dot-3, #dot-4{
-  animation: shine 1.7s ease-in-out;
-}
-
-@keyframes shine{
-  from{
-    stroke: none;
-    stroke-width: 0;
-  }
-  to{
-    stroke: red;
-    stroke-width: 1000;
-    fill: rgb(219, 19, 19);
+    transform: translateY(0%) scale(1);
   }
 }
