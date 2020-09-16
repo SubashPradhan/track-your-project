@@ -3,6 +3,7 @@
   position: fixed;
   z-index: 2;
   transition: all 1s ease-in-out;
+  font-style: italic;
 }
 
 .navbar-container-background{
@@ -41,7 +42,6 @@
 
 .home-heading-nav{
   font-size: 2.5rem;
-  font-style: italic;
   text-shadow: 1px 1.4px 3px #ff8533;
 
 }
@@ -66,7 +66,6 @@
   letter-spacing: 4px;
   color: white;
   font-size: 1.6rem;
-  font-style: italic;
   font-weight: bolder;
   margin: 30px;
   box-shadow: 5px 5px 5px rgba(107, 9, 53, 0.7);
@@ -136,6 +135,30 @@
   background:rgb(214, 2, 2);
 }
 
+.login-button{
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 30px;
+  right: 10%;
+  text-shadow: 0.4px 0.5px 1px #ff8533;
+  transition: all 0.4s ease-in-out;
+}
+
+.login-link{
+  transition: all 0.4s ease-in-out;
+  color: black;
+}
+
+.login-link:hover{
+  text-decoration: none;
+  color: green;
+}
+
+.login-button:hover{
+  transform: scale(1.2);
+}
+
 @media screen and (max-width : 600px){
   .home-heading-nav{
     font-size: 1.3rem;
@@ -144,5 +167,10 @@
 
   .project-logo{
     height: 5rem;
+  }
+
+  .login-button{
+    right: 25%;
+    margin: 5px;
   }
 }

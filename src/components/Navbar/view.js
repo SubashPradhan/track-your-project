@@ -20,9 +20,6 @@ export default function View(props) {
         <div className='logo-container'>
           <img src={projectLogo} alt='Project Logo' className={scrollNav ? 'project-logo project-logo-resize' : 'project-logo'} />
         </div>
-        <div className='login-button'>
-          <Link to='/login'>Login</Link>
-        </div>
         {Links}
         <div className='burger-menu' onClick={handleMenu}>
           <div className={menuClicked ? 'line-one-clicked' : 'line-one'}></div>
@@ -30,6 +27,9 @@ export default function View(props) {
           <div className={menuClicked ? 'line-three-clicked' : 'line-three'}></div>
         </div>
       </Row>
+      <div className='login-button'>
+        <Link to='/login' className="login-link">Login</Link>
+      </div>
     </Container>
   )
 }
