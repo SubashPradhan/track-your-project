@@ -46,7 +46,7 @@ export default function View() {
                   ),
                 }}
               />
-              <button className='login-button'>Login</button>
+              <button className='login-submit'>Login</button>
             </form>
           </div>
         </Col>
