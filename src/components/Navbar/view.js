@@ -2,6 +2,7 @@ import React from 'react'
 import '../../styles/navbar.css'
 import projectLogo from '../../assets/images/project-logo.svg'
 import { Container, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export default function View(props) {
   const { handleMenu, menuClicked, setFocus, scrollNav } = props
@@ -26,6 +27,9 @@ export default function View(props) {
           <div className={menuClicked ? 'line-three-clicked' : 'line-three'}></div>
         </div>
       </Row>
+      <div className='login-button'>
+        <Link to='/login' className="login-link">Login</Link>
+      </div>
     </Container>
   )
 }
