@@ -2,6 +2,7 @@ import React from 'react'
 import '../../styles/navbar.css'
 import projectLogo from '../../assets/images/project-logo.svg'
 import { Container, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export default function View(props) {
   const { handleMenu, menuClicked, setFocus, scrollNav } = props
@@ -18,6 +19,9 @@ export default function View(props) {
       <Row className="justify-content-between">
         <div className='logo-container'>
           <img src={projectLogo} alt='Project Logo' className={scrollNav ? 'project-logo project-logo-resize' : 'project-logo'} />
+        </div>
+        <div className='login-button'>
+          <Link to='/login'>Login</Link>
         </div>
         {Links}
         <div className='burger-menu' onClick={handleMenu}>
