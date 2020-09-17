@@ -2,65 +2,66 @@
   font-family: Orbitron;
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
+.project-logo-login{
+  position: absolute;
+  margin: 10px;
+  cursor: pointer;
+}
 
 .login-container{
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   font-family: Orbitron;
   font-style: italic;
+  align-items: center;
 }
 
 .login-form-container{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: black;
   background: linear-gradient(45deg, rgba(24, 11, 10, 0.8), rgba(85, 66, 110, 0.5)); 
-  height: 100%;
 }
 
-.login-form-container:before {
+.login-form:before {
   content: "";
   position: absolute;
-  border-radius: 0% 0% 0% 100%;
+  border-radius: 0% 0% 100% 0;
   width: 105%;
   height: 150px;
   background-color: white;
   top: 0%;
 }
 
-.login-form-container:after{
+.login-form:after{
   content: "";
   position: absolute;
-  border-radius: 0 100% 0 0;
+  border-radius: 100% 0 0 0;
   width: 105%;
   height: 150px;
   background-color: white;
   bottom: 0;
 }
 
-.img-container{
+.login-img{
   display: flex;
+  align-items: center;  
   justify-content: center;
 }
 
 .login-form{  
   display: flex;
   flex-direction: column;
-  min-width: 40%;
-  /* border-radius: 20px; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   font-style: italic !important;
+  border: none;
 }
 
 .login-header{
-  flex-basis: 100%;
+  text-align: center;
   font-size: 1.8rem;
   letter-spacing: 4px;
   text-shadow: 1px 1.4px 3px #ff8533;
   margin: 5% 0 5% 0;
 }
+
 .MuiInputBase-input{
   font-family: Orbitron !important;
   font-weight: bold;
@@ -105,7 +106,6 @@
 .MuiFilledInput-root:focus-within::before{
   border: 2px solid transparent;
   animation: animate 1s linear forwards;
-
 }
 
 @keyframes animate{
@@ -151,7 +151,6 @@
   animation: animate-below 1s linear forwards;
   animation-delay: 0.7s;
   background-image: linear-gradient(45deg, rgba(14, 13, 13, 0.4), rgba(2, 12, 12,0.4));
-  /* background-image: linear-gradient(90deg, rgba(2, 12, 12, 0.4), rgba(233, 135, 195, 0.2), rgba(250, 248, 246, 0.2)); */
 }
 
 @keyframes animate-below{
@@ -183,6 +182,7 @@
 
 .text-field{
   cursor: pointer;
+  width: 90%;
 }
 
 .login-submit{
@@ -221,4 +221,14 @@
 .login-submit:hover::after,
 .login-submit:hover::before{
   left: 100%;
+}
+
+@media screen and (max-width: 768px){
+  .img-container{
+    z-index: 1;
+    margin-top: 150px;
+  }
+  .login-form-container{
+    margin-top: -100px;
+  }
 }
