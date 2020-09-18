@@ -5,7 +5,7 @@ import { AccountCircle, VisibilityOffRounded } from '@material-ui/icons';
 import { Container, Row, Col } from 'react-bootstrap';
 import LoginImage from '../../assets/images/login.svg'
 import ProjectLogo from '../../assets/images/project-logo.svg'
-import { Flip, Fade, Zoom, LightSpeed} from 'react-reveal';
+import { LightSpeed } from 'react-reveal';
 import Tada from 'react-reveal/Tada';
 
 export default function View(props) {
@@ -27,7 +27,7 @@ export default function View(props) {
 
         <Col lg={6} className="login-form-container">
           <form autoComplete='off' className='login-form'>
-            
+
             <Tada bottom>
               <h3 className='login-header'> Login to Project Management</h3>
             </Tada>
