@@ -9,11 +9,11 @@ import ProjectLogo from '../../assets/images/project-logo.svg'
 export default function View(props) {
   const { handleClick } = props
   return (
-    <Container fluid >
+    <Container fluid className="login-container">
       <div className='project-logo-login'>
         <img src={ProjectLogo} alt="project-logo" className="img-fluid" onClick={handleClick} />
       </div>
-      <Row className="login-container">
+      <Row className="login-content">
         <Col lg={6} className="img-container">
           <div className="login-img">
             <img src={LoginImage} alt="Login" className="img-fluid"></img>
