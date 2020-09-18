@@ -29,7 +29,7 @@ class Navbar extends Component {
   }
 
   // Triggers focus for safari and mobile-devices
-  setFocus = async (e) => {
+  setFocus = (e) => {
     const current = e.target
     if (current) {
       current.focus()

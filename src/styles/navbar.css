@@ -145,6 +145,10 @@
   transition: all 0.4s ease-in-out;
 }
 
+.hide{
+  display: none;
+}
+
 .login-link{
   transition: all 0.4s ease-in-out;
   color: black;
