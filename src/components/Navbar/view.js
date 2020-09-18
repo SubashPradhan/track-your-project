@@ -12,6 +12,7 @@ export default function View(props) {
     <a href="#about" className='link' onClick={setFocus}>About</a>
     <a href="#goals" className='link' onClick={setFocus}>Our Goals</a>
     <a href="#contact" className='link' onClick={setFocus}>Contact</a>
+    <a href="/login" className={'link'} onClick={setFocus}>Login</a>
   </div>
 
   return (
@@ -27,7 +28,7 @@ export default function View(props) {
           <div className={menuClicked ? 'line-three-clicked' : 'line-three'}></div>
         </div>
       </Row>
-      <div className='login-button'>
+      <div className={menuClicked || scrollNav ? 'hide' : 'login-button'}>
         <Link to='/login' className="login-link">Login</Link>
       </div>
     </Container>
