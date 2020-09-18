@@ -2,13 +2,21 @@
   font-family: Orbitron;
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
+
+.login-container{
+  background-image: url('../assets/images/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .project-logo-login{
   position: absolute;
   margin: 10px;
   cursor: pointer;
 }
 
-.login-container{
+.login-content{
   font-family: Orbitron;
   font-style: italic;
   align-items: center;
@@ -22,7 +30,7 @@
   content: "";
   position: absolute;
   border-radius: 0% 0% 100% 0;
-  width: 105%;
+  width: 100%;
   height: 150px;
   background-color: white;
   top: 0%;
@@ -32,7 +40,7 @@
   content: "";
   position: absolute;
   border-radius: 100% 0 0 0;
-  width: 105%;
+  width: 100%;
   height: 150px;
   background-color: white;
   bottom: 0;
