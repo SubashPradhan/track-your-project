@@ -1,0 +1,12 @@
+.svg-paths{
+  animation: animate ease-in-out;
+}
+
+@keyframes animate{
+  0%{
+    transform: scaleX(-1) rotate(45deg);
+  }
+  100%{
+    transform: scaleX(1) rotate(0deg);
+  }
+}
