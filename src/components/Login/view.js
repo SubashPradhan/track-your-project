@@ -7,11 +7,17 @@ import LoginImage from '../../assets/images/login.svg'
 import ProjectLogo from '../../assets/images/project-logo.svg'
 import { LightSpeed } from 'react-reveal';
 import Tada from 'react-reveal/Tada';
+import LoginBackground from '../LoginBackground';
 
 export default function View(props) {
   const { handleClick } = props
   return (
     <Container fluid className="login-container">
+
+      <div className="login-background">
+        <LoginBackground />
+      </div>
+
       <div className='project-logo-login'>
         <img src={ProjectLogo} alt="project-logo" className="img-fluid" onClick={handleClick} />
       </div>

@@ -3,13 +3,11 @@
   src: url("/assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
 }
 
-.login-container{
-  background-image: url('../assets/images/background.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.login-background{
+  position: fixed;
+  top:0;
+  left: 0;
 }
-
 .project-logo-login{
   position: absolute;
   margin: 10px;
@@ -23,7 +21,7 @@
 }
 
 .login-form-container{
-  background: linear-gradient(45deg, rgba(158, 149, 148, 0.8), rgba(85, 66, 110, 1)); 
+  background: linear-gradient(45deg, rgba(158, 149, 148, 0.8), rgba(85, 66, 110, 0.7)); 
 }
 
 .login-form:before {
@@ -86,7 +84,7 @@
 }
 
 .MuiFormLabel-root.Mui-focused{
-  transition: 1s all ease-in-out;
+  transition: all 1s ease-in-out;
   font-weight: bolder !important;
   text-indent: 1.2rem;
   padding: 5px;
@@ -98,7 +96,6 @@
   border-radius: 4px;
   color: aliceblue !important;
 }
-
 
 .MuiFilledInput-root::before{
   content: '';
