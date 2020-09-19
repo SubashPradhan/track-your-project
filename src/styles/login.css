@@ -241,6 +241,6 @@
 
 @media screen and (max-width: 480px){
   .login-background{
-    top: -50%;
+    top: 10%;
   }
 }
