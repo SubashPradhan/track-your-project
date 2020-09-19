@@ -5,9 +5,10 @@
 
 .login-background{
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
 }
+
 .project-logo-login{
   position: absolute;
   margin: 10px;
@@ -235,5 +236,11 @@
   }
   .login-form-container{
     margin-top: -100px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .login-background{
+    top: -50%;
   }
 }
