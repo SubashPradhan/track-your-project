@@ -277,4 +277,23 @@
   .login-background{
     top: 10%;
   }
+
+  @keyframes fade-in{
+    from{
+      transform: translateY(-100%);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes flip{
+    from{
+      transform: translateY(100%) scaleY(-1);
+    }
+    to{
+      transform: translateY(0) scaleY(1);
+    }
+  }
+  
 }
