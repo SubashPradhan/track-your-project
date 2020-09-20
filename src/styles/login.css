@@ -13,6 +13,7 @@
   position: absolute;
   margin: 10px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .login-content{
@@ -21,8 +22,34 @@
   align-items: center;
 }
 
-.login-form-container{
+.login-form-container, .signup-form-container{
   background: linear-gradient(45deg, rgba(158, 149, 148, 0.8), rgba(85, 66, 110, 0.7)); 
+}
+
+.signup-form-flip{
+  animation: flip 2s linear;
+}
+
+.fade-in{
+  animation: fade-in 2s linear;
+}
+
+@keyframes fade-in{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes flip{
+  from{
+    transform: translateX(100%) scaleX(-1);
+  }
+  to{
+    transform: translateX(0) scaleX(1);
+  }
 }
 
 .login-form:before {
@@ -229,11 +256,18 @@
   left: 100%;
 }
 
+.signup-text{
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+
 @media screen and (max-width: 768px){
   .img-container{
     z-index: 1;
     margin-top: 150px;
   }
+
   .login-form-container{
     margin-top: -100px;
   }

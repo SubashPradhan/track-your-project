@@ -8,11 +8,11 @@ class LoginBackground extends Component {
   }
 
   componentDidMount() {
-    let anArray = this.state.backgroundRef.current.childNodes
-    const newArray = Array.from(anArray)
+    let childeNodes = this.state.backgroundRef.current.childNodes
+    const arrayOfChildNodes = Array.from(childeNodes)
     let animationTime = 0.7
 
-    newArray.map(singleItems =>
+    arrayOfChildNodes.map(singleItems =>
       singleItems.style.animationDuration = `${animationTime++}s`
     )
   }

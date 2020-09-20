@@ -12,7 +12,7 @@ export default function View(props) {
     <a href="#about" className='link' onClick={setFocus}>About</a>
     <a href="#goals" className='link' onClick={setFocus}>Our Goals</a>
     <a href="#contact" className='link' onClick={setFocus}>Contact</a>
-    <Link to="/login" className={'link'} onClick={setFocus}>Login</Link>
+    <a href="/login" className={'link'} onClick={setFocus}>Login</a>
   </div>
 
   return (

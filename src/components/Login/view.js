@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../styles/login.css'
-import { TextField, InputAdornment } from '@material-ui/core';
+import { TextField, InputAdornment} from '@material-ui/core';
 import { AccountCircle, VisibilityOffRounded } from '@material-ui/icons';
 import { Container, Row, Col } from 'react-bootstrap';
 import LoginImage from '../../assets/images/login.svg'
@@ -8,9 +8,12 @@ import ProjectLogo from '../../assets/images/project-logo.svg'
 import { LightSpeed } from 'react-reveal';
 import Tada from 'react-reveal/Tada';
 import LoginBackground from '../LoginBackground';
+import { Link } from 'react-router-dom'
+import Signup from '../Signup'
 
 export default function View(props) {
-  const { handleClick } = props
+  const { handleClick, handleSignup, signup } = props
+
   return (
     <Container fluid className="login-container">
 
@@ -23,15 +26,20 @@ export default function View(props) {
       </div>
 
       <Row className="login-content">
+
+        <Col className={signup ? 'signup-form-flip signup-form-container' : 'hide'}>
+          <Signup />
+        </Col>
+        
         <Col lg={6} className="img-container">
-          <div className="login-img">
+          <div className={signup ? "fade-in": "login-img"}>
             <LightSpeed left>
               <img src={LoginImage} alt="Login" className="img-fluid"></img>
             </LightSpeed>
           </div>
         </Col>
 
-        <Col lg={6} className="login-form-container">
+        <Col lg={6} className={signup ? "hide" : "login-form-container"}>
           <form autoComplete='off' className='login-form'>
 
             <Tada bottom>
@@ -71,6 +79,12 @@ export default function View(props) {
               <p className="text-center">Forgot your password ?</p>
             </div>
             <button className='login-submit'>Login</button>
+
+            <div className='signup-text'>
+              <p onClick={handleSignup}>Don't have an account ?
+              <Link>Signup</Link>
+              </p>
+            </div>
           </form>
         </Col>
       </Row>
