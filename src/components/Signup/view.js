@@ -13,7 +13,7 @@ export const View = () => {
           type='text'
           className='text-field'
           label='First Name:'
-          placeholder='Enter your First Name'
+          placeholder='First Name'
           variant='filled'
           InputProps={{
             startAdornment: (
@@ -28,7 +28,7 @@ export const View = () => {
           type='text'
           className='text-field'
           label='Last Name:'
-          placeholder='Enter your Last Name'
+          placeholder='Last Name'
           variant='filled'
           InputProps={{
             startAdornment: (
