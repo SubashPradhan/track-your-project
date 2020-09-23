@@ -1,18 +1,15 @@
 import React from 'react'
 import '../../styles/login.css'
-import { TextField, InputAdornment} from '@material-ui/core';
-import { AccountCircle, VisibilityOffRounded } from '@material-ui/icons';
 import { Container, Row, Col } from 'react-bootstrap';
 import LoginImage from '../../assets/images/login.svg'
 import ProjectLogo from '../../assets/images/project-logo.svg'
 import { LightSpeed } from 'react-reveal';
-import Tada from 'react-reveal/Tada';
 import LoginBackground from '../LoginBackground';
-import { Link } from 'react-router-dom'
-import Signup from '../Signup'
+import SignupForm from '../SignupForm'
+import LoginForm from '../LoginForm'
 
 export default function View(props) {
-  const { handleClick, handleSignup, signup } = props
+  const { handleClick, signup } = props
 
   return (
     <Container fluid className="login-container">
@@ -28,11 +25,11 @@ export default function View(props) {
       <Row className="login-content">
 
         <Col className={signup ? 'signup-form-flip signup-form-container' : 'hide'}>
-          <Signup />
+          <SignupForm />
         </Col>
-        
-        <Col lg={6} className="img-container">
-          <div className={signup ? "fade-in": "login-img"}>
+
+        <Col lg={6} className={signup ? "img-container-signup" : "img-container"}>
+          <div className={signup ? "fade-in" : "login-img"}>
             <LightSpeed left>
               <img src={LoginImage} alt="Login" className="img-fluid"></img>
             </LightSpeed>
@@ -40,52 +37,7 @@ export default function View(props) {
         </Col>
 
         <Col lg={6} className={signup ? "hide" : "login-form-container"}>
-          <form autoComplete='off' className='login-form'>
-
-            <Tada bottom>
-              <h3 className='login-header'> Login to Project Management</h3>
-            </Tada>
-
-            <TextField
-              type='text'
-              className='text-field'
-              label='Email:'
-              placeholder='Enter your email'
-              variant='filled'
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <AccountCircle />
-                  </InputAdornment>
-                ),
-              }}
-            >
-            </TextField>
-            <TextField
-              type='password'
-              className='text-field'
-              label='Password:'
-              placeholder='Enter your password'
-              variant='filled'
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <VisibilityOffRounded />
-                  </InputAdornment>
-                ),
-              }}
-            />
-            <div className="password-text">
-              <p className="text-center">Forgot your password ?</p>
-            </div>
-            <button className='login-submit'>Login</button>
-
-            <div className='signup-text'>
-              <p onClick={handleSignup}>Don't have an account ?
-              <Link>Signup</Link>
-              </p>
-            </div>
-          </form>
+          <LoginForm />
         </Col>
       </Row>
     </Container>

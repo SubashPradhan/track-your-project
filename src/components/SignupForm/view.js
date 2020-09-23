@@ -85,7 +85,7 @@ export const View = () => {
         }}
       />
 
-      <button className='login-submit'>Signup</button>
+      <button className='login-submit signup-submit'>Signup</button>
 
     </form>
   )

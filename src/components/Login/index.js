@@ -1,19 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import View from './view'
 
 class Login extends Component {
-  state = {
-    signup: null
-  }
-
   handleClick = () => {
     this.props.history.push('/')
-  }
-
-  handleSignup = () => {
-    this.setState({
-      signup: true
-    })
   }
 
   render() {
@@ -21,12 +12,16 @@ class Login extends Component {
       <div>
         <View
           handleClick={this.handleClick}
-          signup={this.state.signup}
-          handleSignup={this.handleSignup}
+          signup={this.props.signup}
         />
       </div>
     )
   }
 }
 
-export default Login
+const mapStateToProps = state => {
+  return {
+    signup: state.signup
+  }
+}
+export default connect (mapStateToProps) (Login)
