@@ -1,6 +1,9 @@
 import React from 'react'
 import { TextField, InputAdornment } from '@material-ui/core';
 import { AccountCircle, VisibilityOffRounded } from '@material-ui/icons';
+import SignupProfileIcon from '../../assets/images/signup-profile.svg'
+import GoogleIcon from '../../assets/images/google.svg'
+import FaceBookIcon from '../../assets/images/facebook.svg'
 import '../../styles/signup.css'
 
 export const View = () => {
@@ -8,6 +11,11 @@ export const View = () => {
     <form autoComplete='off' className='signup-form'>
 
       <h3 className='login-header'>Create a new Account</h3>
+
+      <div className="profile-icon">
+        <img src={SignupProfileIcon} alt="profile-icon" className="img-fluid" />
+      </div>
+
       <div className='text-field-signup'>
         <TextField
           type='text'
@@ -87,6 +95,13 @@ export const View = () => {
 
       <button className='login-submit signup-submit'>Signup</button>
 
+      <div className="social-login">
+        Or Sign up with
+        </div>
+      <div className="login-icons">
+        <img src={FaceBookIcon} alt="facebook-icon" />
+        <img src={GoogleIcon} alt="google-icon" />
+      </div>
     </form>
   )
 }
