@@ -23,12 +23,11 @@ export default function View(props) {
       </div>
 
       <Row className="login-content">
-
         <Col className={signup ? 'signup-form-flip signup-form-container' : 'hide'}>
           <SignupForm />
         </Col>
 
-        <Col lg={6} className={signup ? "img-container-signup" : "img-container"}>
+        <Col lg={6} className="img-container">
           <div className={signup ? "fade-in" : "login-img"}>
             <LightSpeed left>
               <img src={LoginImage} alt="Login" className="img-fluid"></img>
