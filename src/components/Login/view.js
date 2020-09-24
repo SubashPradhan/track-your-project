@@ -18,7 +18,7 @@ export default function View(props) {
         <LoginBackground />
       </div>
 
-      <div className='project-logo-login'>
+      <div className="project-logo-login">
         <img src={ProjectLogo} alt="project-logo" className="img-fluid" onClick={handleClick} />
       </div>
 
