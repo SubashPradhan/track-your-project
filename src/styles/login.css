@@ -137,13 +137,14 @@
 
 
 @media screen and (max-width: 768px){
-  .img-container, .login-background{
+  .login-img, .login-background{
     display: none;
   }
 
   .login-container{
     height: auto;
   }
+
   .signup-form-flip{
     animation: flip 0.8s linear;
   }
