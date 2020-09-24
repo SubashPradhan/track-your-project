@@ -3,18 +3,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-style: italic !important;
   border: none;
 }
 
 .text-field-signup{
-  width: 70%;
+  width: 80%;
   display: inline-flex;
 }
 
 .signup-submit{
   margin-top: 20px;
+}
+
+.signup-icons{
+  display: flex;
+  height: 30px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 480px){

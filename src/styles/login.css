@@ -5,6 +5,12 @@
 
 .login-container{
   background: rgba(240, 233, 217, 0.5);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .login-background{
@@ -30,7 +36,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
   font-style: italic !important;
   border: none;
 }
@@ -40,11 +46,10 @@
   font-size: 1.8rem;
   letter-spacing: 4px;
   text-shadow: 1px 1.4px 3px #ff8533;
-  margin: 5% 0 5% 0;
 }
 
 .project-logo-login{
-  position: absolute;
+  align-self: flex-start;
   margin: 10px;
   cursor: pointer;
   z-index: 1;
@@ -108,7 +113,7 @@
 
 .text-field{
   cursor: pointer;
-  width: 70%;
+  width: 80%;
 }
 
 
@@ -130,43 +135,22 @@
   }
 }
 
+
 @media screen and (max-width: 768px){
-  .img-container{
-    z-index: 1;
-    margin-top: 150px;
+  .img-container, .login-background{
+    display: none;
+  }
+
+  .login-container{
+    height: auto;
+  }
+  .signup-form-flip{
+    animation: flip 0.8s linear;
   }
 }
 
 @media screen and (max-width: 480px){
-  .login-background{
-    height: 1000%;
-    top: 10%;
-    bottom: 0;
-  }
-
-  @keyframes fade-in{
-    from{
-      transform: translateY(-100%);
-    }
-    to{
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes flip{
-    from{
-      transform: translateY(100%) scaleY(-1);
-    }
-    to{
-      transform: translateY(0) scaleY(1);
-    }
-  }
-
   .text-field{
     width: 100%;
-  }
-  
-  .signup-form-container{
-    margin-top: 10%;
   }
 }

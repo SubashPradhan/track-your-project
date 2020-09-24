@@ -98,7 +98,7 @@ export const View = () => {
       <div className="social-login">
         Or Sign up with
         </div>
-      <div className="login-icons">
+      <div className="signup-icons">
         <img src={FaceBookIcon} alt="facebook-icon" />
         <img src={GoogleIcon} alt="google-icon" />
       </div>
