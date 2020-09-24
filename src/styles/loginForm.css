@@ -1,3 +1,20 @@
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  font-style: italic !important;
+  border: none;
+}
+
+.login-header{
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  text-shadow: 1px 1.4px 3px #ff8533;
+}
+
 .login-icons{
   display: flex;
   height: 30px;
@@ -6,6 +23,11 @@
 
 .social-login{
   margin-top: 20px;
+}
+
+.text-field{
+  cursor: pointer;
+  width: 80%;
 }
 
 /* TEXT INPUT FIELD */
@@ -33,11 +55,17 @@
 }
 
 .MuiFilledInput-root{
+  box-shadow: 3px 7px 7px rgb(36, 71, 36);
   position: relative;
   margin: 12px;
   border-radius: 4px;
   color: white !important;
+  transition: all 0.7s ease-in-out;
   background: linear-gradient(90deg, rgba(58, 28, 113, 0.7), rgba(215, 109, 119, 0.7), rgba(255, 175, 123, 0.5)) !important;
+}
+
+.MuiFilledInput-root:focus-within{
+  box-shadow: none;
 }
 
 .MuiFilledInput-root::before{
@@ -129,3 +157,8 @@
   }
 }
 
+@media screen and (max-width: 480px){
+  .text-field{
+    width: 100%;
+  }
+}
