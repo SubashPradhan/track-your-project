@@ -31,23 +31,6 @@
   justify-content: center;
 }
 
-.login-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  font-style: italic !important;
-  border: none;
-}
-
-.login-header{
-  text-align: center;
-  font-size: 1.8rem;
-  letter-spacing: 4px;
-  text-shadow: 1px 1.4px 3px #ff8533;
-}
-
 .project-logo-login{
   align-self: flex-start;
   margin: 10px;
@@ -68,10 +51,13 @@
   position: relative;
   overflow: hidden;  
   font-style: italic;
+  box-shadow: 3px 7px 7px rgb(36, 71, 36);
+  transition: all 0.2s ease-in-out;
   background: linear-gradient(90deg, rgba(58, 28, 113, 0.3), rgba(215, 109, 119, 0.7), rgba(255, 175, 123, 0.4));
 }
 
-.login-submit:focus{
+.login-submit:focus-within{
+  box-shadow: none;
   outline: none;
 }
 
@@ -111,12 +97,6 @@
   animation: fade-in 2s linear;
 }
 
-.text-field{
-  cursor: pointer;
-  width: 80%;
-}
-
-
 @keyframes fade-in{
   from{
     transform: translateX(-100%);
@@ -147,11 +127,5 @@
 
   .signup-form-flip{
     animation: flip 0.8s linear;
-  }
-}
-
-@media screen and (max-width: 480px){
-  .text-field{
-    width: 100%;
   }
 }
