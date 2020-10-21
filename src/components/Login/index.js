@@ -5,8 +5,12 @@ import View from './view'
 
 class Login extends Component {
   handleClick = () => {
-    this.props.signupStat()
     this.props.history.push('/')
+    
+    const {signup} = this.props
+    if (signup){
+      this.props.signupStat()
+    }
   }
 
   render() {
@@ -26,4 +30,4 @@ const mapStateToProps = state => {
     signup: state.signup
   }
 }
-export default connect (mapStateToProps, {signupStat}) (Login)
+export default connect(mapStateToProps, { signupStat })(Login)
