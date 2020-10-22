@@ -20,6 +20,14 @@
   display: flex;
   height: 30px;
   margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.signup-icons img{
+  transition: transform 0.4s ease-in-out;
+}
+.signup-icons img:hover{
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 480px){
