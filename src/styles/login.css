@@ -4,7 +4,7 @@
 }
 
 .login-container{
-  background: rgba(240, 233, 217, 0.5);
+  background: #f0e9d980;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,17 +23,15 @@
   font-family: Orbitron;
   font-style: italic;
   align-items: center;
-}
-
-.login-img{
-  display: flex;
-  align-items: center;  
   justify-content: center;
+  margin-top: 7rem;
 }
 
 .project-logo-login{
-  align-self: flex-start;
-  margin: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 25px;
   cursor: pointer;
   z-index: 1;
 }
@@ -115,17 +113,32 @@
   }
 }
 
-
-@media screen and (max-width: 768px){
-  .login-img, .login-background{
-    display: none;
-  }
-
+@media screen and (max-width: 360px){
   .login-container{
     height: auto;
   }
 
+  .project-logo-login{
+    width: 30%;
+  }
+
+  .login-content{
+    margin-top: 10rem;
+  }
+}
+@media screen and (max-width: 768px){
   .signup-form-flip{
     animation: flip 0.8s linear;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  .login-img, .login-background, .fade-in{
+    display: none;
+  }
+
+  .signup-form-container{
+
   }
 }
