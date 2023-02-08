@@ -21,7 +21,8 @@
   box-shadow: 1px 1px 3px #ff8533;;
   border-radius: 10px;
   height: 90%;
-  padding: 20px;
+  /* width: 80%; */
+  padding: 1rem;
 }
 
 .goals-content-heading{
@@ -56,6 +57,10 @@
   padding: 15px;
 }
 
+.goals-img {
+  max-height: 12rem;
+}
+
 .goals-content img {
   margin-top: 10px;
 }
@@ -72,7 +77,9 @@
   }
 
   .goals-content{
-    margin-top: 20px;
+    margin-top: 3rem;
+    width: 100%;
     height: auto;
+    padding: 0;
   }
 }

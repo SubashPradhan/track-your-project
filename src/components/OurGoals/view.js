@@ -11,11 +11,11 @@ export const View = () => {
     <Container fluid className="goals-container">
       <Row className="our-goals">
         <h2 className="goals-heading text-center">Our Goals</h2>
-        <Col lg={4}>
+        <Col lg={3}>
           <Fade left>
             <div className="goals-content">
               <h5 className="goals-content-heading">Work Hard</h5>
-              <img className="img-fluid" src={Person} alt="Working Person" />
+              <img className="img-fluid goals-img" src={Person} alt="Working Person" />
               <p>Stop Doubting yourself, work hard and make it happen...</p>
               <p>
                 Life is all about working, it doesn't matter what you do,
@@ -27,27 +27,27 @@ export const View = () => {
           </Fade>
         </Col>
 
-        <Col lg={4}>
+        <Col lg={3}>
           <Zoom>
             <div className="goals-content">
               <h5 className="goals-content-heading">Save Time</h5>
-              <img className="img-fluid" src={Time} alt="Time" />
+              <img className="img-fluid goals-img" src={Time} alt="Time" />
               <p>People who have fully prepared always save time...</p>
               <p>
                 Make habit of recording your working hours, at the end of the day
                 you can treat yourself for how long and hard you have been working.
                 We understand no job is easy. With our Project-management tool
                 you can easily get used to these healthy habits.
-          </p>
+              </p>
             </div>
           </Zoom>
         </Col>
 
-        <Col lg={4}>
+        <Col lg={3}>
           <Fade right>
             <div className="goals-content">
               <h5 className="goals-content-heading">Save Money</h5>
-              <img className="img-fluid" src={Money} alt="Money icon" />
+              <img className="img-fluid goals-img" src={Money} alt="Money icon" />
               <p>Time is money says the proverb, but turn it around and you get a precious truth...</p>
               <p>
                 Have you ever lost track of the time or the timer stopped working or the tool is having issues
